@@ -1,0 +1,441 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<map name="ingles_interior">
+	<area href=lng.htm?lng=eng coords="570,9,632,24" shape="rect">
+</map>
+<script src="scripts/general.js"></script>
+<script>
+function mostrar(id){
+	document.getElementById('0000002').style.display='none';
+document.getElementById('0000003').style.display='none';
+document.getElementById('0000004').style.display='none';
+document.getElementById('0000005').style.display='none';
+document.getElementById('0000006').style.display='none';
+document.getElementById('0000007').style.display='none';
+	//document.getElementById(id).style.display='inline';
+	$('#'+id).fadeIn(1500);
+}
+function mostrar_public(id){
+	var a = "p_"+id;
+	document.getElementById('p_0000003').style.display='none';
+document.getElementById('p_0000002').style.display='none';
+document.getElementById('p_0000004').style.display='none';
+	document.getElementById(a).style.display='inline';
+}
+</script>
+<script language="JavaScript">
+function pressed(contactus)
+{
+var addressl,m,s,ct,ct1,cm,mlen,mspace;
+email1=contactus.Email.value;
+mlen=contactus.Email.value.length;
+l=contactus.Email.value.length;
+ct=0;
+ct1=0;
+var emsg="";
+if (contactus.Name.value=="")
+emsg+=("\n Name")
+
+
+//if (contactus.Company.value=="")
+//emsg+=("\n Company")
+
+if (contactus.Phone.value=="")
+emsg+=("\n Telephone")
+
+if (contactus.Email.value=="")
+emsg+=("\n Email ID")
+
+
+else
+{for(m=0;m<l;m++)
+{
+s=email1.substr(m,1)
+
+if(s=="@")
+{
+	if (ct>0)
+		{
+		alert("\n Invalid Email ID")
+		contactus.Email.focus()
+		contactus.Email.select()
+		return false;
+				}
+	else
+	{
+	ct=m;
+	}
+}
+if(s==" ")
+mspace=l;
+if(s==".")
+ct1=1;
+}
+if(ct<1||ct1==0 || mlen<5 || mspace>0)
+{
+alert("\n Invalid Email ID")
+contactus.Email.focus()
+contactus.Email.select()
+return false;
+
+}
+}
+
+if (emsg!="")
+{
+alert("Please Enter following Data\n" + emsg)
+return false;
+}
+
+if(validate(contactus.Phone))
+return true;
+else
+return false;
+
+function validate(field) {
+var valid = " +()-0123456789"
+var ok = "yes";
+var temp;
+for (var i=0; i<field.value.length; i++) {
+temp = "" + field.value.substring(i, i+1);
+if (valid.indexOf(temp) == "-1") ok = "no";
+}
+if (ok == "no") {
+alert("Invalid entry!  Only characters and numbers are accepted!");
+field.focus();
+field.select();
+return false;
+  }
+  else
+  return true;
+}
+
+
+}
+
+    </script>
+<link href="scripts/style.css" type=text/css rel=stylesheet>
+<title>Welcome to GARGI :: MUMBAI, INDIA</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class=body>
+<table border=0 cellpadding=0 cellspacing=0 width=1 align=center bgcolor=#FFFFFF>
+	<tr>
+		<td><img src=images/head1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head1_1.jpg></td>
+					<td width=100% style="background: url(images/head_1_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head2_2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head2.jpg></td>
+	</tr>
+	<tr>
+		<td valign=top style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head1_1_1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=854 align=center>
+				<tr>
+					<td valign=top>
+						<table border=0 cellpadding=0 cellspacing=0 width="318" align=center height="123">
+							<tr>
+								<td valign=top style="padding-bottom:4px;" colspan="3">
+								<map name="FPMap0">
+								<area href="index.htm" shape="rect" coords="31, 17, 100, 47">
+								</map>
+								<img src=images/logo_gargi.jpg border=0 usemap="#FPMap0"><map name="FPMap1"><area href="index.htm" shape="rect" coords="603, 22, 633, 45"></map><img src=images/bar.jpg border=0 width="665" height="63" usemap="#FPMap1"></td>
+							</tr>
+							<tr>
+								<td valign=top style="padding-bottom:4px;">
+			<a href="index.htm">
+			<img border="0" src="images/home_rotativa1_fondo.jpg" width="205" height="186"></a></td>
+								<td valign=top style="padding-bottom:4px;">
+								<p align="center">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="541" height="186" id="newintro" align="right">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="images/newintro.swf" />
+<param name="quality" value="High" /><param name="bgcolor" value="#ffffff" />
+<param name="wmode" value="transparent">
+<embed src="images/newintro.swf" quality="High" bgcolor="#ffffff" width="541" height="186" name="newintro" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" />
+</object>
+								</td>
+								<td valign=top style="padding-bottom:4px;">
+			<img border="0" src="images/logo_ha.jpg" width="205" height="186" align="right"></td>
+							</tr>
+							</table>
+					</td>
+					<td width="1"><div id="admin_imagenesflash00010000098swf"></div>
+</td>
+				</tr>
+			</table>
+		</td>
+		<td valign=top style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head2_2_2.jpg></td>
+	</tr>
+
+
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"></td>
+		<td width=100% height=4>
+			</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"></td>
+	</tr>
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+		<td width=100%>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td valign=top style="padding: 0px 10px 3px 0px;">
+						<table border=0 cellpadding=0 cellspacing=0 width=1 align=center>
+							<tr>
+								<td><img src=images/botonera_top.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="background: url(images/botonera_fondo.jpg) repeat-y;">
+									<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+																			<tr>
+											<td width=100%><a href=about.htm class=item_menu>About Us</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=products.htm class=item_menu>Products</a></td>
+										</tr>
+																									<tr>
+											<td width=100%><a href=news.htm class=item_menu>News / Events</a></td>
+										</tr>
+													
+																			<tr>
+											<td width=100%><a href=careers.htm class=item_menu>Careers</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=contact.htm class=item_menu>Contact Us</a></td>
+										</tr>
+																			
+																			<tr>
+											<td width=100%><a href=social.htm class=item_menu>
+											Social Responsibility</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=downloads.htm class=item_menu>
+											Downloads</a></td>
+										</tr>
+																								</table>
+								</td>
+							</tr>
+							<tr>
+								<td><img src=images/botonera_bottom.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="padding-top:3px;">
+								<img src=images/awards_top.jpg width="205" height="24"></td>
+							</tr>
+							<tr>
+								<td>
+								<img src=images/flash_awards.jpg width="205" height="60"></td>
+							</tr>
+							<tr>
+								<td><img src=images/awards_bottom.jpg width="205"></td>
+							</tr>
+							
+								</table>
+					</td>
+					<td width=100% style="padding: 0px 3px 0px 0px;" VALIGN="top"><table border=0 cellpadding=0 cellspacing=0 width=100% align=center VALIGN="top">
+	<tr>
+		<td>
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left 
+              border=0><TBODY>
+              <TR>
+                <TD 
+                style="PADDING-RIGHT: 4px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD></TR>
+                    <TR>
+                      <TD><span class=titulos>International Contacts</span></TD></TR>
+                    <TR>
+                      <TD height="333" valign="top">
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <tr>
+					<td><div style="margin:10px 0px 10px 0px; background-image:url(images/puntos.jpg);"><img src=images/tran.gif></div></td>
+				</tr>
+                                
+                                
+                                
+                                
+                          <tr>
+					<td>
+										Find a Gargi Office near you to 
+							handle your problems about our products. The panel 
+							at the right provides the details of our offices and 
+							officers who will be at your service.</td>
+				</tr>
+                                
+                                
+                                
+                                
+                                </TBODY></TABLE>
+						<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+		<td align=left>
+&nbsp;</td>
+	</tr>
+	<tr>
+		<td align=left><table border=0 cellpadding=0 cellspacing=0 align=left width=100%>
+	<tr>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 align=center width="320">
+				<input type=hidden name=formulario_contacto value=1>
+				</tr>
+					<td valign="top" style="padding-right: 20px;">
+						<table style="BORDER-COLLAPSE: collapse" borderColor="#111111" height="280" cellSpacing="0" cellPadding="0" width="347" border="0">
+							<tr vAlign="top">
+								<td width="347" height="280" rowSpan="3">
+								<p><font color="#0273FD"><b>Fujairah</b></font> </p>
+								<p><b>Mr. S.K. Soni</b></p>
+								<p>&nbsp;</p>
+								<p><strong>Address:</strong> 
+								P.O. Box 1361,
+								Fujairah Free Zone Phase 2,
+								Fujairah,
+								United Arab Emirates. </p>
+								<p>&nbsp;</p>
+								<p><b>Tel.:</b> +971 (09) 2228782 / 5<br>
+								<b>Fax.:</b> +971 (09) 2228783<strong><br>
+								Mobile: </strong>
+								+971 (050) 7407214</p>
+								<p>&nbsp;</td>
+							</tr>
+						</table>
+				</td>
+				</tr>
+				</form>
+			</table>
+		</td>
+	</tr>
+</table></td>
+		<td bgcolor=#E1ECFE width="1"><img src=images/tran.gif></td>
+		<td style="padding-left:24px;" width=100% valign="top" align="center">
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+		<td align=left width=100% style="padding-top:0px;">
+		<b>Gargi    Industriess</b><br>
+2, Mercantile Apartments,<br>
+Opposite Basant Cinema,<br>
+Chembur, Mumbai - 400074.<br>
+Maharashtra. India. <br>
+		<p><b>Tel.</b>: +91&nbsp;(022)&nbsp;25201596, 25201597
+<br>
+<b>Fax</b>: +91 (022) 25202706, 25203080</p>
+		&nbsp;<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td width="14">&nbsp;</td>
+				<td width="148">&nbsp;</td>
+				<td width="14">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="14">&nbsp;</td>
+				<td width="148">&nbsp;</td>
+				<td width="14">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="14">
+				<img border="0" src="images/item_prod.jpg" width="9" height="9"></td>
+				<td width="148"><a href=questions.htm class=titulo_resumen>
+				<span style="font-weight: 400">Ask a Question</span></a></td>
+				<td width="14">
+				<img border="0" src="images/item_prod.jpg" width="9" height="9"></td>
+				<td><a href=feedback.htm class=titulo_resumen>
+				<span style="font-weight: 400">Feedback</span></a></td>
+			</tr>
+			<tr>
+				<td width="14">&nbsp;</td>
+				<td width="148">&nbsp;</td>
+				<td width="14">&nbsp;</td>
+				<td>&nbsp;</td>
+			</tr>
+			<tr>
+				<td width="14">
+				<img border="0" src="images/item_prod.jpg" width="9" height="9"></td>
+				<td width="148"><a href=locations.htm class=titulo_resumen>
+				<span style="font-weight: 400">Office Locations</span></a></td>
+				<td width="14">
+				<img border="0" src="images/item_prod.jpg" width="9" height="9"></td>
+				<td><a href=overseas.htm class=titulo_resumen>
+				<span style="font-weight: 400">International Contacts</span></a></td>
+			</tr>
+		</table>
+		</td>
+	</tr>
+</table></td>
+	</tr>
+	</table>
+						</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+		</td>
+	</tr>
+</table>					
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+	</tr>
+	<tr>
+		<td valign=bottom style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head4_4_4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/cierre1.jpg></td>
+					<td width="100%" style="background-color:#499dff; color:white;">Designed by :  <a target="_blank" href="http://ibridgedigital.com/" class=cierre>iBridge Digital</a></td>
+					<td width=100% bgcolor=#499DFF>
+						<div align="right">
+						<table border=0 cellpadding=0 cellspacing=0 width=750 align=center>
+							<tr>
+								<td width="636">&nbsp;</td>
+								<td width="27"><a href=index.htm class=cierre>Home</a></td>
+								<td style="padding: 0px 6px 0px 5px;"><img src=images/cierre_separa.jpg></td>
+								<td width="74"><a href=terms.htm class=cierre>Terms of Use</a></td>
+								<td style="padding: 0px 6px 0px 5px;" width="1"><img src=images/cierre_separa.jpg></td>
+								<td width="80"><a href=privacy.htm class=cierre>Privacy Policy</a></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+					<td bgcolor=#499DFF style="color:#FFF">&nbsp;</td>
+					<td><img src=images/cierre2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td valign=bottom style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head3_3_3.jpg></td>
+	</tr>
+	<tr>
+		<td><img src=images/head4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head4_4.jpg></td>
+					<td width=100% style="background: url(images/head_3_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head3_3.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head3.jpg></td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11367858-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

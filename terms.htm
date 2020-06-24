@@ -1,0 +1,480 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<map name="ingles_interior">
+	<area href=lng.htm?lng=eng coords="570,9,632,24" shape="rect">
+</map>
+<script src="scripts/general.js"></script>
+<script>
+function mostrar(id){
+	document.getElementById('0000002').style.display='none';
+document.getElementById('0000003').style.display='none';
+document.getElementById('0000004').style.display='none';
+document.getElementById('0000005').style.display='none';
+document.getElementById('0000006').style.display='none';
+document.getElementById('0000007').style.display='none';
+	//document.getElementById(id).style.display='inline';
+	$('#'+id).fadeIn(1500);
+}
+function mostrar_public(id){
+	var a = "p_"+id;
+	document.getElementById('p_0000003').style.display='none';
+document.getElementById('p_0000002').style.display='none';
+document.getElementById('p_0000004').style.display='none';
+	document.getElementById(a).style.display='inline';
+}
+</script>
+<script language="JavaScript">
+function pressed(contactus)
+{
+var addressl,m,s,ct,ct1,cm,mlen,mspace;
+email1=contactus.Email.value;
+mlen=contactus.Email.value.length;
+l=contactus.Email.value.length;
+ct=0;
+ct1=0;
+var emsg="";
+if (contactus.Name.value=="")
+emsg+=("\n Name")
+
+
+//if (contactus.Company.value=="")
+//emsg+=("\n Company")
+
+if (contactus.Phone.value=="")
+emsg+=("\n Telephone")
+
+if (contactus.Email.value=="")
+emsg+=("\n Email ID")
+
+
+else
+{for(m=0;m<l;m++)
+{
+s=email1.substr(m,1)
+
+if(s=="@")
+{
+	if (ct>0)
+		{
+		alert("\n Invalid Email ID")
+		contactus.Email.focus()
+		contactus.Email.select()
+		return false;
+				}
+	else
+	{
+	ct=m;
+	}
+}
+if(s==" ")
+mspace=l;
+if(s==".")
+ct1=1;
+}
+if(ct<1||ct1==0 || mlen<5 || mspace>0)
+{
+alert("\n Invalid Email ID")
+contactus.Email.focus()
+contactus.Email.select()
+return false;
+
+}
+}
+
+if (emsg!="")
+{
+alert("Please Enter following Data\n" + emsg)
+return false;
+}
+
+if(validate(contactus.Phone))
+return true;
+else
+return false;
+
+function validate(field) {
+var valid = " +()-0123456789"
+var ok = "yes";
+var temp;
+for (var i=0; i<field.value.length; i++) {
+temp = "" + field.value.substring(i, i+1);
+if (valid.indexOf(temp) == "-1") ok = "no";
+}
+if (ok == "no") {
+alert("Invalid entry!  Only characters and numbers are accepted!");
+field.focus();
+field.select();
+return false;
+  }
+  else
+  return true;
+}
+
+
+}
+
+    </script>
+<link href="scripts/style.css" type=text/css rel=stylesheet>
+<title>Welcome to GARGI :: MUMBAI, INDIA</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class=body>
+<table border=0 cellpadding=0 cellspacing=0 width=1 align=center bgcolor=#FFFFFF>
+	<tr>
+		<td><img src=images/head1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head1_1.jpg></td>
+					<td width=100% style="background: url(images/head_1_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head2_2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head2.jpg></td>
+	</tr>
+	<tr>
+		<td valign=top style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head1_1_1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=854 align=center>
+				<tr>
+					<td valign=top>
+						<table border=0 cellpadding=0 cellspacing=0 width="318" align=center height="123">
+							<tr>
+								<td valign=top style="padding-bottom:4px;" colspan="3">
+								<map name="FPMap0">
+								<area href="index.htm" shape="rect" coords="31, 17, 100, 47">
+								</map>
+								<img src=images/logo_gargi.jpg border=0 usemap="#FPMap0"><map name="FPMap1"><area href="index.htm" shape="rect" coords="603, 22, 633, 45"></map><img src=images/bar.jpg border=0 width="665" height="63" usemap="#FPMap1"></td>
+							</tr>
+							<tr>
+								<td valign=top style="padding-bottom:4px;">
+			<a href="index.htm">
+			<img border="0" src="images/home_rotativa1_fondo.jpg" width="205" height="186"></a></td>
+								<td valign=top style="padding-bottom:4px;">
+								<p align="center">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="541" height="186" id="newintro" align="right">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="images/newintro.swf" />
+<param name="quality" value="High" /><param name="bgcolor" value="#ffffff" />
+<param name="wmode" value="transparent">
+<embed src="images/newintro.swf" quality="High" bgcolor="#ffffff" width="541" height="186" name="newintro" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" />
+</object>
+								</td>
+								<td valign=top style="padding-bottom:4px;">
+			<img border="0" src="images/logo_ha.jpg" width="205" height="186" align="right"></td>
+							</tr>
+							</table>
+					</td>
+					<td width="1"><div id="admin_imagenesflash00010000098swf"></div>
+</td>
+				</tr>
+			</table>
+		</td>
+		<td valign=top style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head2_2_2.jpg></td>
+	</tr>
+
+
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"></td>
+		<td width=100% height=4>
+			</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"></td>
+	</tr>
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+		<td width=100%>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td valign=top style="padding: 0px 10px 3px 0px;">
+						<table border=0 cellpadding=0 cellspacing=0 width=1 align=center>
+							<tr>
+								<td><img src=images/botonera_top.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="background: url(images/botonera_fondo.jpg) repeat-y;">
+									<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+																			<tr>
+											<td width=100%><a href=about.htm class=item_menu>About Us</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=products.htm class=item_menu>Products</a></td>
+										</tr>
+																									<tr>
+											<td width=100%><a href=news.htm class=item_menu>News / Events</a></td>
+										</tr>
+													
+																			<tr>
+											<td width=100%><a href=careers.htm class=item_menu>Careers</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=contact.htm class=item_menu>Contact Us</a></td>
+										</tr>
+																			
+																			<tr>
+											<td width=100%><a href=social.htm class=item_menu>
+											Social Responsibility</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=downloads.htm class=item_menu>
+											Downloads</a></td>
+										</tr>
+																								</table>
+								</td>
+							</tr>
+							<tr>
+								<td><img src=images/botonera_bottom.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="padding-top:3px;">
+								<img src=images/awards_top.jpg width="205" height="24"></td>
+							</tr>
+							<tr>
+								<td height="2650" valign="top">
+								<img src=images/flash_awards.jpg width="205" height="2650"></td>
+							</tr>
+							<tr>
+								<td><img src=images/awards_bottom.jpg width="205"></td>
+							</tr>
+							
+								</table>
+					</td>
+					<td width=100% style="padding: 0px 3px 0px 0px;" VALIGN="top"><table border=0 cellpadding=0 cellspacing=0 width=100% align=center VALIGN="top">
+	<tr>
+		<td>
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left 
+              border=0><TBODY>
+              <TR>
+                <TD 
+                style="PADDING-RIGHT: 4px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD></TR>
+                    <TR>
+                      <TD><span class=titulos>Terms of Use</span></TD></TR>
+                    <TR>
+                      <TD height="333" valign="top">
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <tr>
+					<td><div style="margin:10px 0px 10px 0px; background-image:url(images/puntos.jpg);"><img src=images/tran.gif></div></td>
+				</tr>
+                                
+                                
+                                
+                                
+                          <tr>
+					<td>
+										Welcome to Gargi and Gargi's Web Site ("Site"). This Site is provided as a service to our customers. This site is intended to provide information to you about Gargi and to provide you with the opportunity to contact us. While we want you to enjoy the experience of visiting our site, we also want you to understand the terms you agree to when visiting this site. So, now a word from our lawyers:
+
+<p>&nbsp;</p>
+						<p>Please review the following basic rules that govern your use of our Site. By using this Site, you agree to be bound by the terms and conditions outlined in this Agreement ("Agreement"). If you do not agree to these terms and conditions, please do not use this Site. Although you may "bookmark" a particular portion of this Site and thereby bypass this Agreement, your use of this Site still binds you to these terms and conditions. Since Gargi may revise this Agreement at any time, you should visit this page periodically to review the terms and conditions of your use. Gargi reserves the right to update or modify this Agreement at any time without prior notice. Your use of the Site following any such change constitutes your agreement to follow and be bound by these terms and conditions as changed. For this reason, we encourage you to review these terms and conditions whenever you use this Site.
+<p>&nbsp;</p>
+						<p>
+We may also change, move or delete portions of, or may add to, our Site from time to time.
+<p>&nbsp;</p>
+										<p>&nbsp;</p>
+						<p>
+<b>SITE CONTENTS AND USE
+<br>
+</b>
+The Site is provided to you on an "AS IS" and "WITH ALL FAULTS" basis. This means that despite our best efforts the Site may contain inaccuracies, omissions, errors or other defects and you rely on it at your own risk. GARGI MAKES AND YOU RECEIVE NO WARRANTY, WHETHER EXPRESS OR IMPLIED. ALL WARRANTIES, EXPRESS AND IMPLIED, ARE EXPRESSLY EXCLUDED AND DISCLAIMED, INCLUDING WITHOUT LIMITATION WARRANTIES OF MERCHANTABILITY, TITLE, NON-INFRINGEMENT, AND FITNESS FOR ANY PARTICULAR PURPOSE. IN NO EVENT SHALL WE BE LIABLE FOR ANY DAMAGES, CLAIM OR LOSS INCURRED BY YOU (INCLUDING WITHOUT LIMITATION COMPENSATORY, INCIDENTAL, DIRECT, INDIRECT, SPECIAL, CONSEQUENTIAL OR EXEMPLARY DAMAGES, LOST PROFITS, LOST SALES OR BUSINESS, EXPENDITURES, INVESTMENTS, OR COMMITMENTS, LOSS OF ANY GOODWILL, OR DAMAGES RESULTING FROM LOST, DAMAGED OR MISAPPROPRIATED DATA, INABILITY TO USE DATA, DELAYS, INTERRUPTIONS, OR COMPUTER VIRUSES), IRRESPECTIVE OF WHETHER WE HAVE BEEN INFORMED OF, KNEW OF, OR SHOULD HAVE KNOWN OF THE LIKELIHOOD OF SUCH DAMAGES. THIS LIMITATION APPLIES TO ALL CAUSES OF ACTION IN THE AGGREGATE INCLUDING WITHOUT LIMITATION BREACH OF CONTRACT, BREACH OF WARRANTY, DEFAMATION, NEGLIGENCE, STRICT LIABILITY, MISREPRESENTATION, AND OTHER TORTS, AS WELL AS THIRD-PARTY CLAIMS. IF THE WARRANTY EXCLUSION OR LIMITATION OF LIABILITY SET FORTH IN THIS USE AGREEMENT IS FOR ANY REASON WHATSOEVER HELD UNENFORCEABLE OR INAPPLICABLE, YOU AGREE THAT OUR LIABILITY SHALL NOT EXCEED TWENTY U.S. DOLLARS ($20).
+<p>&nbsp;</p>
+						<p>
+In addition, We also have no liability for any viruses or anything beyond our control. We are not responsible for any damage to your computer, software, modem, telephone or other property resulting from your use of the Site.
+<p>&nbsp;</p>
+						<p>
+Unless otherwise noted, all materials, including images, illustrations, designs, icons, photographs, video clips, and written and other materials that appear as part of this Site (collectively, the "Contents") are copyrights, trademarks, trade dress and/or other intellectual properties owned, controlled or licensed by Gargi and/or its subsidiaries and/or affiliates. You have a non-transferable, non-exclusive license to access this Site, to view information contained at this Site, and to interact with the Site solely for your own personal use. You agree not to use the Site for any unlawful purpose. You agree not to rent, retransmit, disclose, publish, sell, assign, lease, sublicense, market, or transfer the Site or any portion thereof or use it in any manner not expressly authorized by this Agreement. You agree not to copy, reverse engineer, translate, port, modify or make derivative works of any portion of the Site. We retain all ownership rights in the Site.
+<p>&nbsp;</p>
+						<p>
+The compilation (meaning the collection, arrangement and assembly) of all content on this Site is the exclusive property of Gargi and is also protected by U.S. and international copyright laws.
+<p>&nbsp;</p>
+						<p>
+The Contents of our Site, and the Site as a whole, are intended solely for the personal, noncommercial (other than for the purchase of merchandise from our Site) use by the users of our Site. You may download or copy the Contents and other downloadable materials displayed on the Site for your personal use only. No right, title or interest in any downloaded materials or software is transferred to you as a result of any such downloading or copying. You may not reproduce (except as noted above), publish, transmit, distribute, display, modify, create derivative works from, sell or participate in any sale of, or exploit in any way, in whole or in part, any of the Contents, the Site, or any related software.
+<p>&nbsp;</p>
+						<p>
+The Contents and software on this Site may be used only as a shopping resource. Any other use, including the reproduction, modification, distribution, transmission, republication, display or performance of the Contents is strictly prohibited.
+<p>&nbsp;</p>
+						<p>
+The information on the Site may contain typographical errors or inaccuracies and may not be complete or current. We therefore reserve the right to correct any errors, inaccuracies or omissions and to change or update information at any time without prior notice (including after you have submitted your order). Please note that such errors, inaccuracies or omissions may relate to product description, pricing and availability. We apologize for any inconvenience this may cause you.
+<p>&nbsp;</p>
+						<p>
+All comments, feedback, postcards, suggestions, ideas, and other submissions disclosed, submitted or offered to Gargi on or by this Site or otherwise disclosed, submitted or offered in connection with your use of this Site (collectively, "Comments") shall be and remain the property of Gargi. Such disclosure, submission or offer of any Comments shall constitute an assignment to Gargi of all worldwide rights, titles and interests in all copyrights and other intellectual properties in the Comments. Thus, Gargi and/or Gargi will own exclusively all such rights, titles and interests and shall not be limited in any way in its use, commercial or otherwise, of such Comments. Gargi is and shall be under no obligation: (1) to maintain any Comments in confidence; (2) to pay to you any compensation for any Comments; or (3) to respond to any of your Comments.
+<p>&nbsp;</p>
+						<p>
+You agree that no Comments submitted by you to the Site will violate any right of any third party, including copyright, trademark, privacy or other personal or proprietary right(s). You further agree that no Comments submitted by you to the Site will be or contain libelous or otherwise unlawful, abusive or obscene material. You are and shall remain solely responsible for the content of any Comments you make. You agree that any comments you submit about our products or services may be used and disclosed by us in whole or in edited form in our marketing or advertising materials. You will not use the Site for any purpose that is unlawful, abusive, harassing, libelous, defamatory, obscene or threatening, or injurious or detrimental to the Site. You agree not to submit any information that infringes on or violates the privacy, rights, or other intellectual property rights of others, anything that is illegal, defamatory, obscene, harassing, offensive, objectionable or sexually explicit, that encourages a violation of the law, that contains a virus, that is off-topic.
+<p>&nbsp;</p>
+						<p>
+We reserve the right to terminate or restrict your access to the Site in our sole discretion, without notice and without limitation, for any reason. We have no liability to you in the event of a termination of this Agreement.
+<p>&nbsp;</p>
+						<p>
+You are responsible for the confidentiality and use of your password(s). You agree to notify us immediately if you become aware of: a) any loss or theft of your access password(s); or b) any unauthorized use of any of your password(s).
+<p>&nbsp;</p>
+						<p>
+You agree that Gargi may send electronic mail to you for the purpose of advising you of changes or additions to this Site, about any of Gargi's products or services, or for such other purpose(s) as Gargi deems appropriate. Please note, however, that Gargi is under no obligation to notify you of any modifications or changes to this Site as the same may occur from time to time, and Gargi's failure to notify you of any modifications or changes to the Site does not release you from adhering to the terms and conditions contained in this Agreement as they exist from time to time.
+<p>&nbsp;</p>
+						<p>
+We have made every effort to display as accurately as possible the colors of our products that appear on this Site. However, as the actual colors you see will depend on your monitor, we cannot guarantee that your monitor's display of any color will be accurate.
+<p>&nbsp;</p>
+										<p>&nbsp;</p>
+						<p>
+<b>LINKS TO OTHER WEB SITES AND SERVICES
+<br>
+</b>To the extent that this Site contains links to other web sites which provide outside services and resources, the availability and content of which Gargi does not control, any concerns or problems regarding any such service or resource, or any link thereto, should be directed to the particular web site or company providing such outside service or resource. Gargi does not endorse or make any warranties or representations about any web site you may access through or by way of Gargi and/or its aliases, and is not responsible for and assumes no liability for any inaccuracies, misstatements or misrepresentations at such other web sites. Links to other web sites are provided for convenience only. You must make your own decisions regarding your interactions or communications with any other web site.
+<p>&nbsp;</p>
+										<p>&nbsp;</p>
+						<p>
+<b>DISCLAIMERS
+<br>
+</b>THIS SITE AND ALL CONTENTS OF THIS SITE ARE PROVIDED BY 
+<span style="text-transform: uppercase">Gargi </span>ON AN "AS IS" BASIS. 
+<span style="text-transform: uppercase">Gargi </span>MAKES NO REPRESENTATIONS OR WARRANTIES OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING WITHOUT LIMITATION WARRANTIES OF TITLE, MERCHANTABILITY OR FITNESS FOR A PARTICULAR PURPOSE. YOU ACKNOWLEDGE, BY YOUR USE OF THE SITE, THAT YOUR USE OF THE SITE IS AT YOUR SOLE RISK, THAT YOU ASSUME FULL RESPONSIBILITY FOR ALL COSTS ASSOCIATED WITH ALL NECESSARY SERVICING OR REPAIRS OF ANY EQUIPMENT YOU USE IN CONNECTION WITH YOUR USE OF OUR SITE, AND THAT 
+<span style="text-transform: uppercase">Gargi </span>NOR 
+<span style="text-transform: uppercase">Gargi</span> SHALL BE LIABLE FOR ANY DAMAGES OF ANY KIND ARISING FROM YOUR USE OF THIS SITE, INCLUDING, BUT NOT LIMITED TO DIRECT, INDIRECT, INCIDENTAL, PUNITIVE, AND CONSEQUENTIAL DAMAGES. WITHOUT LIMITING THE FOREGOING, 
+<span style="text-transform: uppercase">Gargi </span>DOES NOT REPRESENT OR WARRANT THAT THE INFORMATION ON THE 
+<span style="text-transform: uppercase">Gargi</span> WEB SITE IS ACCURATE, COMPLETE OR CURRENT OR THAT THE 
+<span style="text-transform: uppercase">Gargi </span>SITE WILL OPERATE WITHOUT INTERRUPTION OR ERROR. 
+<p>&nbsp;</p>
+										<p>&nbsp;</p>
+						<p>
+<b>INDEMNIFICATION
+
+<br>
+</b>You agree to defend, indemnify and hold Gargi and/or Gargi, its parent, subsidiaries and affiliates harmless from and against any and all claims, damages, costs and expenses, including attorneys' fees, arising from or related to your use of the Site.
+										<p>
+&nbsp;<p>&nbsp;</p>
+						<p>
+<b>LIMITATION OF LIABILITY
+<br>
+</b>UNDER NO CIRCUMSTANCES SHALL <span style="text-transform: uppercase">Gargi</span> OR ITS PARENT OR ANY OF ITS SUBSIDIARIES, AFFILIATES, EMPLOYEES, DIRECTORS, OFFICERS, AGENTS, VENDORS OR SUPPLIERS BE LIABLE TO YOU OR ANY THIRD PARTIES FOR ANY DIRECT OR INDIRECT LOSSES OR DAMAGES ARISING OUT OF OR IN CONNECTION WITH YOUR USE OF OR INABILITY TO USE THE 
+<span style="text-transform: uppercase">Gargi</span> SITE.
+<p>&nbsp;</p>
+						<p>
+THIS IS A COMPREHENSIVE LIMITATION OF LIABILITY THAT APPLIES TO ALL LOSSES AND DAMAGES OF ANY KIND (WHETHER GENERAL, SPECIAL, CONSEQUENTIAL, INCIDENTAL, EXEMPLARY OR OTHERWISE, INCLUDING, WITHOUT LIMITATION, LOSS OF DATA, INCOME OR PROFITS), WHETHER IN CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION, EVEN IF AN AUTHORIZED REPRESENTATIVE OF 
+<span style="text-transform: uppercase">Gargi</span> HAS BEEN ADVISED OF OR SHOULD HAVE KNOWN OF THE POSSIBILITY OF SUCH DAMAGES.
+<p>&nbsp;</p>
+						<p>
+IF YOU ARE DISSATISFIED WITH THIS SITE OR ANY CONTENT ON THE SITE, OR WITH THIS AGREEMENT OR TERMS AND CONDITIONS, YOUR SOLE AND EXCLUSIVE REMEDY IS TO DISCONTINUE USING THE 
+<span style="text-transform: uppercase">Gargi </span>SITE.
+<p>&nbsp;</p>
+						<p>
+APPLICABLE LAW MAY NOT ALLOW THE LIMITATION OF LIABILITY SET FORTH ABOVE, SO THIS LIMITATION OF LIABILITY MAY NOT APPLY TO YOU. IF ANY PART OF THIS LIMITATION ON LIABILITY IS FOUND TO BE INVALID OR UNENFORCEABLE FOR ANY REASON, THEN THE AGGREGATE LIABILITY OF 
+<span style="text-transform: uppercase">Gargi</span> UNDER SUCH CIRCUMSTANCES FOR LIABILITIES THAT OTHERWISE WOULD HAVE BEEN LIMITED SHALL NOT EXCEED TWENTY DOLLARS ($20) AS STATED ABOVE.
+<p>&nbsp;</p>
+										<p>&nbsp;</p>
+						<p>
+<b>TERMINATION
+<br>
+</b>This Agreement is effective unless and until terminated by either you or Gargi. You may terminate this Agreement at any time. Gargi and/or Gargi also may terminate this Agreement at any time and may do so immediately without notice, and accordingly deny you access to the Site, if in Gargi's sole discretion you fail to comply with any term or provision of this Agreement. Upon any termination of this Agreement by either you or Gargi, you must promptly destroy all materials downloaded or otherwise obtained from this Site, as well as all copies of such materials, whether made under the terms of this Agreement or otherwise.
+<p>&nbsp;</p>
+										<p>&nbsp;</p>
+						<p>
+<b>And lastly...
+<br>
+</b>Unless otherwise specified and except to the extent Gargi products are offered for sale through this Site, this Site and the Contents thereof are displayed solely for the purpose of promoting Gargi's and Gargi's products and services available in the United States and in affiliate International markets. This Site is controlled and operated by Gargi from its offices in India and its server located in California.
+<p>&nbsp;</p>
+						<p>
+This Agreement shall be construed in accordance with the laws of India, without regard to any conflict of law provisions. Any dispute arising under this Agreement shall be resolved exclusively by the state and local courts of India.
+<p>&nbsp;</p>
+						<p>
+You represent you are over 13 years of age and have the legal capacity to access the Gargi site and enter into a contract and/or legally allowed to divulge the information collected in the registration process.
+<p>&nbsp;</p>
+						<p>
+This Agreement and the terms and conditions of use contained herein represent the entire agreement between you and Gargi.
+<p>&nbsp;</p>
+						<p>Copyright © 1999-2002 Gargi,  and Gargi-india.com.
+ 
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+											<tr>
+												<td width="577" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+												<tr>
+													<td width="577">
+													<p align="left"><img border="0" src="images/item_prod.jpg" width="9" height="9">
+								<a class=mas_info href="#top">
+								Back to top</a></td>
+													<td>&nbsp;</td>
+												</tr>
+											</table>
+											</td>
+				</tr>
+                                
+                                
+                                
+                                
+                                </TBODY></TABLE>
+						<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+		<td align=left>
+&nbsp;</td>
+	</tr>
+	</table>
+						</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+		</td>
+	</tr>
+</table>					
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+	</tr>
+	<tr>
+		<td valign=bottom style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head4_4_4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/cierre1.jpg></td>
+					<td width="100%" style="background-color:#499dff; color:white;">Designed by :  <a target="_blank" href="http://ibridgedigital.com/" class=cierre>iBridge Digital</a></td>
+					<td width=100% bgcolor=#499DFF>
+						<div align="right">
+						<table border=0 cellpadding=0 cellspacing=0 width=750 align=center>
+							<tr>
+								<td width="636">&nbsp;</td>
+								<td width="27"><a href=index.htm class=cierre>Home</a></td>
+								<td style="padding: 0px 6px 0px 5px;"><img src=images/cierre_separa.jpg></td>
+								<td width="74"><a href=terms.htm class=cierre>Terms of Use</a></td>
+								<td style="padding: 0px 6px 0px 5px;" width="1"><img src=images/cierre_separa.jpg></td>
+								<td width="80"><a href=privacy.htm class=cierre>Privacy Policy</a></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+					<td bgcolor=#499DFF style="color:#FFF">&nbsp;</td>
+					<td><img src=images/cierre2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td valign=bottom style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head3_3_3.jpg></td>
+	</tr>
+	<tr>
+		<td><img src=images/head4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head4_4.jpg></td>
+					<td width=100% style="background: url(images/head_3_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head3_3.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head3.jpg></td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11367858-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

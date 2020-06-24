@@ -1,0 +1,672 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<script src="scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<script src="jquery.js"></script>
+<map name="ingles_interior">
+	<area href=lng.htm?lng=eng coords="570,9,632,24" shape="rect">
+</map>
+
+<style>
+	.pop_up{
+        width: 300px;
+        height: 70px;
+        position: absolute;
+        color: #000000;
+        background-color: #ffffff;
+        top: 50%;
+        left: 50%;
+        margin-top: -100px;
+        margin-left: -150px;
+		border-radius:5px;
+		padding: 20px;
+		
+      }
+	  #clo_se
+	  {
+		  
+		   background-color: #f85d02;
+			background-position: 0 0;
+			background-repeat: repeat-x;
+			border-radius: 2px 2px 2px 2px;
+			color: #FFFFFF;
+			display: block;
+			font-size: 1em;
+			font-weight: bold;
+			margin: 0 13px;
+			padding: 5px 8px;
+			text-transform: uppercase;
+			margin: 15px 0px 0px 114px;
+			width: 52px;
+			cursor: pointer;
+	}
+</style>
+<script src="scripts/general.js"></script>
+<script>
+function mostrar(id){
+document.getElementById('0000002').style.display='none';
+document.getElementById('0000003').style.display='none';
+document.getElementById('0000004').style.display='none';
+document.getElementById('0000005').style.display='none';
+document.getElementById('0000006').style.display='none';
+document.getElementById('0000007').style.display='none';
+	//document.getElementById(id).style.display='inline';
+	$('#'+id).fadeIn(1500);
+}
+function mostrar_public(id){
+	var a = "p_"+id;
+	document.getElementById('p_0000003').style.display='none';
+	document.getElementById('p_0000002').style.display='none';
+	document.getElementById('p_0000004').style.display='none';
+	document.getElementById(a).style.display='inline';
+}
+</script>
+<script language="JavaScript">
+
+
+
+/////////New Validation 
+$(document).ready(function(){
+
+	$("#enter").click(function(){
+      var valid = validate_contact();
+
+      if(valid)
+		{
+			var a =send_data();
+
+			
+    			    $("#mail-status").show();
+    				 setTimeout(function () {
+    			 		 $('#mail-status').hide();
+    			 		  $('#contactus')[0].reset();
+  						}, 5000);
+		   
+			return true; 
+		}
+
+    });
+
+
+	function validate_contact()
+		{
+
+				if($('#Name').val() =="")
+    			{
+    				alert('Enter Name.');
+    				$('#Name').css('border-color', '#ff0000');
+    				$("#Name").focus();
+    				return false;
+    			}
+    			else
+    			{
+    				$('#Name').css('border-color', '#a4c7ff');
+    			}
+
+
+    			if($('#Company').val() =="")
+    			{
+    				alert('Enter Company Name.');
+    				$('#Company').css('border-color', '#ff0000');
+    				$("#Company").focus();
+    				return false;
+    			}
+    			else
+    			{
+    				$('#Company').css('border-color', '#a4c7ff');
+    			}
+
+    			if($('#Phone').val() =="" )
+    			{
+    				alert('Enter Contact Number.');
+    				$('#Phone').css('border-color', '#ff0000');
+    				$("#Phone").focus();
+    				return false;
+    			}
+    			else
+    			{
+    				$('#Phone').css('border-color', '#a4c7ff');
+    			}
+
+
+    			if(($('#Phone').val().length) !=10 )
+    			{
+					alert('Enter ten digit mobile number');
+					$('#Phone').css('border-color', '#ff0000');
+					$("#Phone").focus();
+					return false;
+    			}
+    			else
+    			{
+    				$('#Phone').css('border-color', '#a4c7ff');
+    			}
+
+
+    			if($('#Email').val() =="")
+    			{
+    				alert('Enter Email.');
+    				$('#Email').css('border-color', '#ff0000');
+    				$("#Email").focus();
+    				return false;
+    			}
+    			else
+    			{
+    				$('#Email').css('border-color', '#a4c7ff');
+   					
+    			}
+
+    			var a = IsEmail($('#Email').val());
+
+
+    			if(!a)
+				{
+					alert('Enter correct Email.');
+					$('#Email').css('border-color', '#ff0000');
+					$("#Email").focus();
+					return false;
+				}
+				else
+				{
+					$('#Email').css('border-color', '#a4c7ff');
+				}
+
+
+    			if($('#Comments').val() =="")
+    			{
+    				alert('Enter Comments.');
+    				$('#Comments').css('border-color', '#ff0000');
+    				$("#Comments").focus();
+    				return false;
+    			}
+    			else
+    			{
+    				$('#Comments').css('border-color', '#a4c7ff');
+    			}
+
+
+    			function IsEmail(email)
+    			 {
+       			 var regex = /^([a-zA-Z0-9_\.\-\+])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+      			  if(!regex.test(email))
+      			   {
+         		  	return false;
+       			   }
+       			   else
+       			   {
+          		 	return true;
+       			   }
+     			 }
+
+    			return true	
+		}
+
+
+		function send_data()
+		{
+    	
+       		 $.ajax({
+       		 url: "submit.php?Name="+ $('#Name').val() + "&Company=" + $('#Company').val() + "&Phone=" + $('#Phone').val() + "&Email=" + $('#Email').val() + "&Comments=" + $('#Comments').val(),
+       		 	type: "POST",
+       		 	success: function(result){
+       		 	
+          	$("#mail-status").html(result);
+       	 }});
+   		
+    	}
+
+
+});
+
+
+//////////End Validation
+/*
+function pressed(contactus)
+{
+
+var addressl,m,s,ct,ct1,cm,mlen,mspace;
+email1=contactus.Email.value;
+mlen=contactus.Email.value.length;
+l=contactus.Email.value.length;
+ct=0;
+ct1=0;
+var emsg="";
+
+if (contactus.Name.value=="")
+emsg+=("\n Name")
+
+/*
+if (contactus.Company.value=="")
+emsg+=("\n Company")
+*/
+/*
+if (contactus.Phone.value=="")
+emsg+=("\n Phone")
+else 
+{	
+		if(!validate(contactus.Phone))
+		return false;
+}
+
+if (contactus.Email.value=="")
+emsg+=("\n Email ID")
+
+else
+{for(m=0;m<l;m++)
+{
+s=email1.substr(m,1)
+
+if(s=="@")
+{
+	if (ct>0)
+		{
+		alert("\n Invalid Email ID")
+		contactus.Email.focus()
+		contactus.Email.select()
+		return false;
+				}
+	else
+	{
+		ct=m;
+	}
+}
+if(s==" ")
+	mspace=l;
+if(s==".")
+	ct1=1;
+}
+if(ct<1||ct1==0 || mlen<5 || mspace>0)
+{
+	alert("\n Invalid Email ID")
+	contactus.Email.focus()
+	contactus.Email.select()
+	return false;
+
+}
+}
+*/
+
+/*
+
+if (contactus.Comments.value=="")
+emsg+=("\n Comments")
+*/
+/*
+if (emsg!="")
+{
+alert("Please Enter following Data\n" + emsg)
+return false;
+}
+else
+{
+		//document.getElementById('pop_up').style.display='block';
+		//document.getElementById("con_tact").style.opacity = "0.5";
+		//document.getElementById("pop_up").style.zIndex = "1";
+		//document.getElementById('con_tact').style.pointerEvents = 'none';
+			
+		//return false;	
+}
+/*
+function validate(field) {
+var valid = "0123456789"
+var ok = "yes";
+var temp;
+for (var i=0; i<field.value.length; i++) 
+{
+	temp = "" + field.value.substring(i, i+1);
+	if (valid.indexOf(temp) == "-1") ok = "no";
+}
+if (ok == "no") 
+{
+		alert("Invalid Phone Number!");
+		field.focus();
+		field.select();
+		return false;
+}
+  else
+  
+  return true;
+}
+
+
+}
+
+
+function close_div()
+{
+	//document.getElementById('pop_up').style.display='none';	
+	//document.getElementById('con_tact').style.pointerEvents = 'auto';
+	//document.getElementById("con_tact").style.opacity = "1";
+	//document.contactus.reset();
+}*/
+    </script>
+
+
+<link href="scripts/style.css" type=text/css rel=stylesheet>
+<title>Welcome to GARGI :: MUMBAI, INDIA</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class=body id='body'>
+
+<div id='pop_up'class='pop_up' style="display:none" >Thank you for your interest. Your enquiry has been successfully sent<div id="clo_se" onClick="close_div()">Close</div></div>
+
+<table id='con_tact' border=0 cellpadding=0 cellspacing=0 width=1 align=center bgcolor=#FFFFFF>
+	<tr>
+		<td><img src=images/head1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head1_1.jpg></td>
+					<td width=100% style="background: url(images/head_1_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head2_2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head2.jpg></td>
+	</tr>
+	<tr>
+		<td valign=top style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head1_1_1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=854 align=center>
+				<tr>
+					<td valign=top>
+						<table border=0 cellpadding=0 cellspacing=0 width="318" align=center height="123">
+							<tr>
+								<td valign=top style="padding-bottom:4px;" colspan="3">
+								<map name="FPMap0">
+								<area href="index.htm" shape="rect" coords="31, 17, 100, 47">
+								</map>
+								<img src=images/logo_gargi.jpg border=0 usemap="#FPMap0"><map name="FPMap1"><area href="index.htm" shape="rect" coords="603, 22, 633, 45"></map><img src=images/bar.jpg border=0 width="665" height="63" usemap="#FPMap1"></td>
+							</tr>
+							<tr>
+								<td valign=top style="padding-bottom:4px;">
+			<a href="index.htm">
+			<img border="0" src="images/home_rotativa1_fondo.jpg" width="205" height="186"></a></td>
+								<td valign=top style="padding-bottom:4px;">
+								<p align="center">
+<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0','width','541','height','186','id','newintro','align','right','src','images/contact','quality','High','bgcolor','#ffffff','name','newintro','allowscriptaccess','sameDomain','pluginspage','http://www.macromedia.com/go/getflashplayer','wmode','transparent','movie','images/contact' ); //end AC code
+</script><noscript><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="541" height="186" id="newintro" align="right">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="images/contact.swf" />
+<param name="quality" value="High" /><param name="bgcolor" value="#ffffff" />
+<param name="wmode" value="transparent">
+<embed src="images/contact.swf" quality="High" bgcolor="#ffffff" width="541" height="186" name="newintro" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" />
+</object></noscript>
+								</td>
+								<td valign=top style="padding-bottom:4px;">
+			<img border="0" src="images/logo_ha.jpg" width="205" height="186" align="right"></td>
+							</tr>
+							</table>
+					</td>
+					<td width="1"><div id="admin_imagenesflash00010000098swf"></div>
+</td>
+				</tr>
+			</table>
+		</td>
+		<td valign=top style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head2_2_2.jpg></td>
+	</tr>
+
+
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"></td>
+		<td width=100% height=4>
+			</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"></td>
+	</tr>
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+		<td width=100%>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td valign=top style="padding: 0px 10px 3px 0px;">
+						<table border=0 cellpadding=0 cellspacing=0 width=1 align=center>
+							<tr>
+								<td><img src=images/botonera_top.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="background: url(images/botonera_fondo.jpg) repeat-y;">
+									<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+																			<tr>
+											<td width=100%><a href=about.htm class=item_menu>About Us</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=products.htm class=item_menu>Products</a></td>
+										</tr>
+																									<tr>
+											<td width=100%><a href=news.htm class=item_menu>News / Events</a></td>
+										</tr>
+													
+																			<tr>
+											<td width=100%><a href=careers.htm class=item_menu>Careers</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=contact.htm class=item_menu>Contact Us</a></td>
+										</tr>
+																			
+																			<tr>
+											<td width=100%><a href=social.htm class=item_menu>
+											Social Responsibility</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=downloads.htm class=item_menu>
+											Downloads</a></td>
+										</tr>
+																								</table>
+								</td>
+							</tr>
+							<tr>
+								<td><img src=images/botonera_bottom.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="padding-top:3px;">
+								<img src=images/awards_top.jpg width="205" height="13"></td>
+							</tr>
+							<tr>
+								<td bgcolor="#E6E6E6">
+								<p align="center">
+								<img border="0" src="images/q1.jpg" width="187" height="185"></td>
+							</tr>
+							<tr>
+								<td><img src=images/awards_bottom.jpg width="205"></td>
+							</tr>
+							
+								</table>
+					</td>
+					<td width=100% style="padding: 0px 3px 0px 0px;" VALIGN="top"><table border=0 cellpadding=0 cellspacing=0 width=100% align=center VALIGN="top">
+	<tr>
+		<td>
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left 
+              border=0><TBODY>
+              <TR>
+                <TD 
+                style="PADDING-RIGHT: 4px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD></TR>
+                    <TR>
+                      <TD><span class=titulos>Contact Us</span></TD></TR>
+                    <TR>
+                      <TD height="333" valign="top">
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <tr>
+					<td><div style="margin:10px 0px 10px 0px; background-image:url(images/puntos.jpg);"><img src=images/tran.gif></div></td>
+				</tr>
+				</TBODY></TABLE>
+						<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	
+	<tr>
+		<td align=left>
+<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+		<td align=left>&nbsp;
+		<table border="0" width="100%" cellspacing="0" cellpadding="0">
+			<tr>
+				<td valign="top">
+		<b>
+		<p align="left">GARGI GROUP</p>
+		</b>
+		<p align="left">
+		2, Mercantile Apartments, <br>
+		Dr. C. Gidwani Road, Chembur,
+<br>
+		Mumbai - 400074. Maharashtra. India.
+</p>
+				<p align="left">&nbsp;
+		</p>
+				</td>
+			</tr>
+			<tr>
+				<td valign="top" height="48">
+				<p align="left">
+		<b>Tel.:</b>  +91 (022) 25201596  / 7 <br>
+		<b>Email</b>: <a href="mailto:gargi@gargi-india.com">
+		gargi@gargi-india.com</a></p></td>
+			</tr>
+		</table>
+</td>
+	</tr>
+	</table></td>
+	</tr>
+	<tr>
+		<td align=left >&nbsp;<p>&nbsp;<div id="mail-status" style="margin-left: 140px;color: green;font-size: 18px;margin-bottom: 15px;"></div></p>
+<table border=0 cellpadding=0 cellspacing=0 width=100% >
+	<tr>
+		<td align=left><table border=0 cellpadding=0 cellspacing=0 align=left width=100%>
+	<tr>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 align=center>
+							<FORM id="contactus" name=contactus action=submit.php method=post onsubmit="" style="margin:0;margin-top:23px">
+				<input type=hidden name=formulario_contacto value=1>
+				</tr>
+					<td valign="top" style="padding-right: 20px;">
+						<table border=0 cellpadding=0 cellspacing=5 >
+							<tr>
+								<td class=form_label width="63">
+								<p style="text-align: left">Name<font class=asterisco> *</font></td>
+								<td><input type="text" name=Name id=Name></td>
+							</tr>
+							<tr>
+								<td class=form_label width="63">
+								<p style="text-align: left">Company</td>
+								<td><input type="text" name=Company id=Company></td>
+							</tr>
+														<tr>
+								<td class=form_label width="63">
+								<p style="text-align: left">Tel<font class=asterisco>. *</font></td>
+								<td><input type="text" name="Phone" id=Phone></td>
+							</tr>
+							<tr>
+								<td class=form_label width="63">
+								<p style="text-align: left">Email<font class=asterisco> *</font></td>
+								<td><input type="text" name="Email" id=Email></td>
+							</tr>
+							<tr>
+								<td class=form_label valign="top" width="63">Comments</td>
+								<td>
+									<textarea name="Comments" style="height:90px;" id=Comments></textarea>
+								</td>
+							</tr>
+														<tr>
+								<td width="63"><img src="images/tran.gif" height=0></td>
+								<td align=right>
+									<table border=0 cellpadding=0 cellspacing=0 width=100%>
+										<tr>
+											<td align="right" style="padding-top:12px; padding-bottom:6px;">
+				<input style="height:21px; cursor: pointer;" class="enviar"  type="button" border=0 name="enter"  id="enter" value=""><br />
+											</td>
+										</tr>
+										<tr>
+											<td align="right">
+												<font class=asterisco>*Compulsory 
+												Obligatory</font>														
+											</td>
+										</tr>
+									</table>
+								</td>
+							</tr>
+						</table>
+					</td>
+				</tr>
+				</form>
+			</table>
+		</td>
+	</tr>
+</table></td>
+		<td bgcolor=#E1ECFE width="1"><img src=images/tran.gif></td>
+		<td style="padding-left:20px;" width=100% valign="top" align="center">
+		<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	
+</table></td>
+	</tr>
+	</table>
+	</tr>
+	<tr>
+		<td align=left>&nbsp;</tr>
+	</table>
+						</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+		</td>
+	</tr>
+</table>					
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+	</tr>
+	<tr>
+		<td valign=bottom style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head4_4_4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/cierre1.jpg></td>
+					<td width="100%" style="background-color:#499dff; color:white;">Designed by :  <a target="_blank" href="http://ibridgedigital.com/" class=cierre>iBridge Digital</a></td>
+					<td width=100% bgcolor=#499DFF>
+						<div align="right">
+						<table border=0 cellpadding=0 cellspacing=0 width=750 align=center>
+							<tr>
+								<td width="636">&nbsp;</td>
+								<td width="27"><a href=index.htm class=cierre>Home</a></td>
+								<td style="padding: 0px 6px 0px 5px;"><img src=images/cierre_separa.jpg></td>
+								<td width="74"><a href=terms.htm class=cierre>Terms of Use</a></td>
+								<td style="padding: 0px 6px 0px 5px;" width="1"><img src=images/cierre_separa.jpg></td>
+								<td width="80"><a href=privacy.htm class=cierre>Privacy Policy</a></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+					<td bgcolor=#499DFF style="color:#FFF">&nbsp;</td>
+					<td><img src=images/cierre2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td valign=bottom style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head3_3_3.jpg></td>
+	</tr>
+	<tr>
+		<td><img src=images/head4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head4_4.jpg></td>
+					<td width=100% style="background: url(images/head_3_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head3_3.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head3.jpg></td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11367858-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

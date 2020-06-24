@@ -1,0 +1,457 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<script src="scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<map name="ingles_interior">
+	<area href=lng.htm?lng=eng coords="570,9,632,24" shape="rect">
+</map>
+<script src="scripts/general.js"></script>
+<script>
+function mostrar(id){
+	document.getElementById('0000002').style.display='none';
+document.getElementById('0000003').style.display='none';
+document.getElementById('0000004').style.display='none';
+document.getElementById('0000005').style.display='none';
+document.getElementById('0000006').style.display='none';
+document.getElementById('0000007').style.display='none';
+	//document.getElementById(id).style.display='inline';
+	$('#'+id).fadeIn(1500);
+}
+function mostrar_public(id){
+	var a = "p_"+id;
+	document.getElementById('p_0000003').style.display='none';
+document.getElementById('p_0000002').style.display='none';
+document.getElementById('p_0000004').style.display='none';
+	document.getElementById(a).style.display='inline';
+}
+</script>
+<script language="JavaScript">
+function pressed(contactus)
+{
+var addressl,m,s,ct,ct1,cm,mlen,mspace;
+email1=contactus.Email.value;
+mlen=contactus.Email.value.length;
+l=contactus.Email.value.length;
+ct=0;
+ct1=0;
+var emsg="";
+if (contactus.Name.value=="")
+emsg+=("\n Name")
+
+
+//if (contactus.Company.value=="")
+//emsg+=("\n Company")
+
+if (contactus.Phone.value=="")
+emsg+=("\n Telephone")
+
+if (contactus.Email.value=="")
+emsg+=("\n Email ID")
+
+
+else
+{for(m=0;m<l;m++)
+{
+s=email1.substr(m,1)
+
+if(s=="@")
+{
+	if (ct>0)
+		{
+		alert("\n Invalid Email ID")
+		contactus.Email.focus()
+		contactus.Email.select()
+		return false;
+				}
+	else
+	{
+	ct=m;
+	}
+}
+if(s==" ")
+mspace=l;
+if(s==".")
+ct1=1;
+}
+if(ct<1||ct1==0 || mlen<5 || mspace>0)
+{
+alert("\n Invalid Email ID")
+contactus.Email.focus()
+contactus.Email.select()
+return false;
+
+}
+}
+
+if (emsg!="")
+{
+alert("Please Enter following Data\n" + emsg)
+return false;
+}
+
+if(validate(contactus.Phone))
+return true;
+else
+return false;
+
+function validate(field) {
+var valid = " +()-0123456789"
+var ok = "yes";
+var temp;
+for (var i=0; i<field.value.length; i++) {
+temp = "" + field.value.substring(i, i+1);
+if (valid.indexOf(temp) == "-1") ok = "no";
+}
+if (ok == "no") {
+alert("Invalid entry!  Only characters and numbers are accepted!");
+field.focus();
+field.select();
+return false;
+  }
+  else
+  return true;
+}
+
+
+}
+
+    </script>
+<link href="scripts/style.css" type=text/css rel=stylesheet>
+<title>Welcome to GARGI :: MUMBAI, INDIA</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class=body>
+<table border=0 cellpadding=0 cellspacing=0 width=1 align=center bgcolor=#FFFFFF>
+	<tr>
+		<td><img src=images/head1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head1_1.jpg></td>
+					<td width=100% style="background: url(images/head_1_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head2_2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head2.jpg></td>
+	</tr>
+	<tr>
+		<td valign=top style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head1_1_1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=854 align=center>
+				<tr>
+					<td valign=top>
+						<table border=0 cellpadding=0 cellspacing=0 width="318" align=center height="123">
+							<tr>
+								<td valign=top style="padding-bottom:4px;" colspan="3">
+								<map name="FPMap0">
+								<area href="index.htm" shape="rect" coords="31, 17, 100, 47">
+								</map>
+								<img src=images/logo_gargi.jpg border=0 usemap="#FPMap0"><map name="FPMap1"><area href="index.htm" shape="rect" coords="603, 22, 633, 45"></map><img src=images/bar.jpg border=0 width="665" height="63" usemap="#FPMap1"></td>
+							</tr>
+							<tr>
+								<td valign=top style="padding-bottom:4px;">
+			<a href="index.htm">
+			<img border="0" src="images/home_rotativa1_fondo.jpg" width="205" height="186"></a></td>
+								<td valign=top style="padding-bottom:4px;">
+								<p align="center">
+<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0','width','541','height','186','id','newintro','align','right','src','images/newintro','quality','High','bgcolor','#ffffff','name','newintro','allowscriptaccess','sameDomain','pluginspage','http://www.macromedia.com/go/getflashplayer','wmode','transparent','movie','images/newintro' ); //end AC code
+</script><noscript><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="541" height="186" id="newintro" align="right">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="images/newintro.swf" />
+<param name="quality" value="High" /><param name="bgcolor" value="#ffffff" />
+<param name="wmode" value="transparent">
+<embed src="images/newintro.swf" quality="High" bgcolor="#ffffff" width="541" height="186" name="newintro" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" />
+</object></noscript>
+								</td>
+								<td valign=top style="padding-bottom:4px;">
+			<img border="0" src="images/logo_ha.jpg" width="205" height="186" align="right"></td>
+							</tr>
+							</table>
+					</td>
+					<td width="1"><div id="admin_imagenesflash00010000098swf"></div>
+</td>
+				</tr>
+			</table>
+		</td>
+		<td valign=top style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head2_2_2.jpg></td>
+	</tr>
+
+
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"></td>
+		<td width=100% height=4>
+			</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"></td>
+	</tr>
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+		<td width=100%>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td valign=top style="padding: 0px 10px 3px 0px;">
+						<table border=0 cellpadding=0 cellspacing=0 width=1 align=center>
+							<tr>
+								<td><img src=images/botonera_top.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="background: url(images/botonera_fondo.jpg) repeat-y;">
+									<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+																			<tr>
+											<td width=100%><a href=about.htm class=item_menu>About Us</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=products.htm class=item_menu>Products</a></td>
+										</tr>
+																									<tr>
+											<td width=100%><a href=news.htm class=item_menu>News / Events</a></td>
+										</tr>
+													
+																			<tr>
+											<td width=100%><a href=careers.htm class=item_menu>Careers</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=contact.htm class=item_menu>Contact Us</a></td>
+										</tr>
+																			
+																			<tr>
+											<td width=100%><a href=social.htm class=item_menu>
+											Social Responsibility</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=downloads.htm class=item_menu>
+											Downloads</a></td>
+										</tr>
+																								</table>
+								</td>
+							</tr>
+							<tr>
+								<td><img src=images/botonera_bottom.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="padding-top:3px;">
+								<img src=images/awards_top.jpg width="205" height="24"></td>
+							</tr>
+							<tr>
+								<td height="2339" valign="top">
+								<img src=images/flash_awards.jpg width="205" height="2339"></td>
+							</tr>
+							<tr>
+								<td><img src=images/awards_bottom.jpg width="205"></td>
+							</tr>
+							
+								</table>
+					</td>
+					<td width=100% style="padding: 0px 3px 0px 0px;" VALIGN="top"><table border=0 cellpadding=0 cellspacing=0 width=100% align=center VALIGN="top">
+	<tr>
+		<td>
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left 
+              border=0><TBODY>
+              <TR>
+                <TD 
+                style="PADDING-RIGHT: 4px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD></TR>
+                    <TR>
+                      <TD><span class=titulos>Privacy Policy</span></TD></TR>
+                    <TR>
+                      <TD height="333" valign="top">
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <tr>
+					<td><div style="margin:10px 0px 10px 0px; background-image:url(images/puntos.jpg);"><img src=images/tran.gif></div></td>
+				</tr>
+                                
+                                
+                                
+                                
+                          <tr>
+					<td>
+										Questions regarding our policy should be directed to <span style="padding-top:6px;">
+										<a href="mailto:gargi@gargi-india.com">gargi@gargi-india.com</a> </span>
+										&nbsp;<p>Welcome to Gargi-india.com (the "Site") and the Gargi community. We believe safeguarding your privacy online is important and we are committed protecting it in an appropriate manner. Take a moment to read about our policy on privacy protection and how it pertains to you.
+
+<p>&nbsp;</p><p>At Gargi-india.com, we know your number one concern is privacy. Therefore, we have tried to do everything we can to create an online shopping environment that makes you feel comfortable. We believe that we maintain the security and privacy standards you expect, so you can have the relaxed online shopping experience you deserve. We value your trust and recognize that your personal information is confidential.
+
+<p>&nbsp;</p><p>This notice explains our Privacy Policy (this "Policy") regarding such matters as the kind of information we collect, how we use that information and the choices you can make about that information. Please read this Policy carefully. We may revise or amend this Policy in the future, so please check this Policy from time to time. Your use of the Site signifies your agreement to this Policy, and your continued use of the Site in the future signifies your agreement to any revisions to it.
+
+
+<p>&nbsp;</p>
+										<p>&nbsp;</p><p>
+<b>What information is collected?
+<br>
+</b>We collect several different types of information. On some pages you can order products, enter contests, answer surveys, express opinions, subscribe to one of our online services such as newsletters, or participate in one of our online forums or communities. The types of personally identifiable information that may be collected at these pages include: name, gender, age, zip code or address, e-mail address, telephone number, fax number and credit card information. From time to time, we may ask for other personal information, such as your interests, occupation or your preferences regarding various products, programs, and services. The more information you volunteer, the more we can enrich your experience at the Site. On certain pages of the Site, you can submit information about other people. For example, you might submit a friend's name and e-mail address if you wish to send an electronic greeting, or a friend's physical address if you order a gift online and wish to send it directly to the person. The types of personally identifiable information that may be collected about other people at these pages include: the recipient's name, address, e-mail address, and telephone number.
+<p>&nbsp;</p><p>
+Typically, when you visit our online store, you have the option to register with us to make your online shopping experience as easy as possible. While it is not necessary to register in order to shop, as a registered online shopper at Gargi-india.com you will enjoy exclusive online discounts and a simpler, faster checkout. We request the following personal information from you on our registration form: first and last name, billing/shipping address, telephone number, email address, username, password, password hint, credit card, and credit card number. This is the information we need to process your order. Your telephone number is required to complete the registration or order process, so that we can use it to contact you about your order if we need to. Your billing information is also used to ensure that the right person is charged for the merchandise ordered. In an effort to guard against fraud, we provide this information to EFTSecure for verification. In addition, we utilize PaymentTech as our third-party credit card processor.
+<p>&nbsp;</p><p>
+We request the same information on our order form upon checking out as we do on our registration page. Therefore, by completing the registration form upon your first visit, you can shop as often as you wish without ever having to re-enter your billing/shipping address or payment information. If you choose not to register as an online shopper, you must fill out your personal information each time you check out. We store your personal information and order history in a secure server and the information is available to you when you log in with your username and password.
+<p>&nbsp;</p><p>
+We also may collect certain personally identifiable information when you visit the Site such as the type of browser or operating system you are using on your computer, or the name of Internet service provider, or how you entered the Site and your pathway through the Site.
+										<p>
+&nbsp;<p>&nbsp;</p><p>
+<b>ID/IP Address Verification
+<br>
+</b>We use a third party and third party software to verify and record a user's identity, address and/or credit card billing verification. This information is confidential and is held on a secure server to protect your privacy. 
+<p>&nbsp;</p>
+										<p>&nbsp;</p><p>
+<b>Cookies
+<br>
+</b>The use of cookies is standard on the Internet and many web sites, including Gargi-india.com and its subsidiaries. Cookies are small bits of electronic information that a web site can transfer to your hard drive to keep records of your visit. At Gargi-india.com we use cookies as a tool to personalize your online shopping experience and assess our efforts to provide an easier, more streamlined online shopping experience.
+<p>&nbsp;</p><p>
+First of all, we use a cookie so we can recognize you as a repeat customer each time you visit. This cookie allows us to retrieve your order history and personal information so you do not have to re-enter it every time you shop. This means you can store items, maintain your own address book and customize your user area. Another cookie lets us know what pages you visit as well as your browsing, shopping, and searching patterns. This enables us to identify ways to customize our online shopping environment to the preferences of our customers.
+<p>&nbsp;</p><p>
+You always have the option to refuse cookies by turning them off in your browser. However, if you refuse cookies, you may not be able to place or track an order (see the Help section of your browser for instructions on how to disable cookies). Should you choose to disable cookies and cannot place an order on our site, you can always order by phone. Our Customer Service Representatives will be happy to assist you. Simply call Gargi to place your order.
+<p>&nbsp;</p><p>
+We use cookies to understand the usage of the Site and to improve the content and offerings on the Site. For example, we may use cookies to personalize your experience at our web pages, such as recognizing you by name when you return to the Site, saving your password in password-protected areas and enabling you to use shopping carts. We also may use cookies to offer you products or services. Please remember that the Site contains links to other sites of affiliates, partners or other companies, which may send their own cookies to you. 
+										<p>
+&nbsp;<p>&nbsp;</p><p>
+<b>How does Gargi use my personal information?
+</b><p>
+Gargi uses the information you provide to personalize your online experience, which includes maintaining individual portfolios for your exclusive access. It also lets us better match on-site advertising and direct mail offers with your particular interests and structure future product offerings and product lines to your needs. Personal information is also used to allow us to arrange for delivery of prizes you win or products you purchase.
+<p>&nbsp;</p><p>
+You agree that Gargi may use and/or disclose information about your demographics and use of the Site in any manner. By participating in Site sweepstakes, contests, promotions, and/or requesting promotional information or product updates, you agree that Gargi may use your information for marketing and promotional purposes. For this reason, we ask that you not send us any Comments that you do not wish to assign to us, including any confidential information or any original creative materials such as stories, product ideas, computer code or original artwork. See Terms of Use Agreement.
+<p>&nbsp;</p><p>
+<b>What information does Gargi send from the Site?
+</b><p>&nbsp;</p><p>
+<b><font color="#800000">Special Offers and Updates
+</font>
+</b>We send all new members a welcoming email to verify password and username. Established members will occasionally receive information on products, services, special deals, and a newsletter. Out of respect for the privacy of our users we present the option to not receive these types of communications. 
+<p>&nbsp;</p><p>
+<b><font color="#800000">Newsletter</font>
+</b>If a user wishes to subscribe to our newsletter, we ask for contact information such as name and email address. Out of respect for our users privacy we provide a way to opt-out of these communications. 
+<p>&nbsp;</p><p>
+<b><font color="#800000">Service Announcements</font>
+</b>On rare occasions it is necessary to send out a strictly service related announcement. For instance, if our service is temporarily suspended for maintenance we might send users an email. Generally, users may not opt-out of these communications, though they can deactivate their account. However, these communications are not promotional in nature. 
+<p>&nbsp;</p><p>
+<b><font color="#800000">Customer Service</font>
+</b>We communicate with users on a regular basis to provide requested services and in regards to issues relating to their account we reply via email or phone, in accordance with the users wishes. 
+<p>&nbsp;</p><p>
+<b><font color="#800000">Direct Mailings</font>
+</b>We will send you occasional information about our various discounts, products and services, or other discounts, products and services we feel may be of interest to you. If you do not want to receive such mailings, you may email gargi@bom2.vsnl.net.in or call our customer services representatives and request to stop receiving undesired direct mailings. 
+<p>&nbsp;</p>
+										<p>&nbsp;</p><p>
+<b>Does Gargi disclose any of my personal information?
+</b><p>
+Gargi and Gargi-india.com does not sell or redistribute your personal information in any form. 
+The following exceptions may apply:
+<p>&nbsp;</p>
+										<p>&nbsp;</p><p>
+<b>Aggregated User Statistics
+<br>
+</b>Personal information may be aggregated with that of other users and revealed to a third party advertiser or sponsor. The information revealed will never identify an individual Gargi-india.com member or provide any third party the ability to contact a member directly. Aggregated information will never contain names, e-mail addresses or mailing addresses, but may include gender, age, household income, occupation or state of residence. 
+<p>&nbsp;</p>
+										<p>&nbsp;</p><p>
+<b>Third Party Agreements
+</b><br>
+Gargi and/or Gargi-india.com may enter into express agreements from time to time with third parties for the purpose of providing Gargi-india.com users with member benefits, such as goods or services, and Gargi may share user information with those third parties for the purpose of providing the benefits to Gargi-india.com users. Emails that we or any of our partners send will involve a description of a simple opt-out process to enable you to stop receiving future emails. Although we take appropriate measures to safeguard against unauthorized disclosures of information, we cannot guarantee that personally identifiable information we collect will never be disclosed in a manner that is inconsistent with this Privacy Policy. Inadvertent disclosures may result, for example, when a third party misrepresents his identity in asking the Site for access to personally identifiable information about himself or herself for purposes of correcting possible errors in the data. Also, personal information that you provide online, for example, through message boards or chats, may be collected and used by third parties which we do not control. 
+<p>&nbsp;</p>
+										<p>&nbsp;</p><p>
+<b>Law Enforcement Requests
+<br>
+</b>Gargi-india.com fully cooperates with law enforcement agencies working to identify those who may use our services for illegal activity. Therefore, we reserve the right to disclose information to law enforcement agencies about shoppers who we believe are violating our content guidelines or are involved in otherwise unlawful activities. You understand that we may comply with law enforcement requests or subpoenas regarding your use of the Site. 
+<p>&nbsp;</p>
+										<p>&nbsp;</p><p>
+<b>Children's Online Privacy
+</b>
+<br>
+Gargi is concerned with the safety of children when they use the Internet. In accordance with the Children's Online Privacy Protection Act of 1998, Gargi-india.com does not knowingly collect personal information from children under the age of 13. If we receive actual knowledge that a child under the age of thirteen has registered without her or his parent's or guardian's permission, we will remove all personal information about that person from our files. To prevent subsequent communication to a child under the age of 13, we may maintain a record of that person's name and address in a "do not contact" file. If a child has provided Gargi-india.com with personal information, we ask that a parent or guardian contact us to have that information deleted from our files.
+
+
+<p>&nbsp;</p><p>
+In a nutshell, we use your personal information to enhance or evaluate the online service you receive. We protect your information by storing it on our own secure web server and in a private database. It is the policy of Gargi to not share or sell this information except as noted above. If you do not want to receive our messages, you can opt out at any time. We value your privacy and we protect it.
+ 
+
+<table border="0" width="100%" cellspacing="0" cellpadding="0">
+											<tr>
+												<td width="577" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+												<tr>
+													<td width="577">
+													<p align="left"><img border="0" src="images/item_prod.jpg" width="9" height="9">
+								<a class=mas_info href="#top">
+								Back to top</a></td>
+													<td>&nbsp;</td>
+												</tr>
+										  </table>
+										</td>
+				</tr>
+                                
+                                
+                                
+                                
+                                </TBODY></TABLE>
+						<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+		<td align=left>&nbsp;
+</td>
+	</tr>
+	</table>
+						</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+		</td>
+	</tr>
+</table>					
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+	</tr>
+	<tr>
+		<td valign=bottom style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head4_4_4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/cierre1.jpg></td>
+					<td width="100%" style="background-color:#499dff; color:white;">Designed by :  <a target="_blank" href="http://ibridgedigital.com/" class=cierre>iBridge Digital</a></td>
+					<td width=100% bgcolor=#499DFF>
+						<div align="right">
+						<table border=0 cellpadding=0 cellspacing=0 width=750 align=center>
+							<tr>
+								<td width="636">&nbsp;</td>
+								<td width="27"><a href=index.htm class=cierre>Home</a></td>
+								<td style="padding: 0px 6px 0px 5px;"><img src=images/cierre_separa.jpg></td>
+								<td width="74"><a href=terms.htm class=cierre>Terms of Use</a></td>
+								<td style="padding: 0px 6px 0px 5px;" width="1"><img src=images/cierre_separa.jpg></td>
+								<td width="80"><a href=privacy.htm class=cierre>Privacy Policy</a></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+					<td bgcolor=#499DFF style="color:#FFF">&nbsp;</td>
+					<td><img src=images/cierre2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td valign=bottom style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head3_3_3.jpg></td>
+	</tr>
+	<tr>
+		<td><img src=images/head4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head4_4.jpg></td>
+					<td width=100% style="background: url(images/head_3_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head3_3.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head3.jpg></td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11367858-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

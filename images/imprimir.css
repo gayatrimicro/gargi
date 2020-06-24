@@ -1,0 +1,78 @@
+A:link { text-decoration: none; color: #515151; font-weight: none }
+A:visited { text-decoration: none; color: #515151; font-weight: none }
+A:hover { text-decoration: underline; color: #515151; font-weight: none }
+
+A.link_menu:link { text-decoration: none; color: #ffffff; font-weight: bold }
+A.link_menu:visited { text-decoration: none; color: #ffffff; font-weight: bold }
+A.link_menu:hover { text-decoration: underline; color: #000000; font-weight: bold }
+
+A.link_home:link { text-decoration: none; color: #515151; font-weight: none }
+A.link_home:visited { text-decoration: none; color: #515151; font-weight: none }
+A.link_home:hover { text-decoration: underline; color: #515151; font-weight: none }
+
+.d16 {FONT-SIZE: 16px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d15 {FONT-SIZE: 15px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d14 {FONT-SIZE: 14px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d13 {FONT-SIZE: 13px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d12 {FONT-SIZE: 12px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d11 {FONT-SIZE: 11px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d10 {FONT-SIZE: 10px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d9 {FONT-SIZE: 9px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d8 {FONT-SIZE: 8px;font-weight: none;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+
+.texto_general{
+	color: #000000;
+}
+
+body{
+	background-color: #ffffff;
+	color: #000000;
+	margin: 8px;
+}
+
+div, td,input {
+	FONT-SIZE: 11px;
+	font-weight: none;
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+}
+
+
+
+.titulo_general{
+	font-size: 16px;
+	font-weight: bold;
+	color: #000000;
+}
+
+.tbl_titulo_general{
+	border-bottom: #000 0px solid;
+}
+
+.td_titulo_general{
+	border-left: #000 0px solid;
+}
+
+.td_listado_head{
+	color: #000000;
+	font-weight: bold;
+	background-color: #ffffff;
+	padding: 5px;
+	border-bottom: #000 2px solid;
+}
+
+.td_listado_1era_col{
+	color: #000000;
+	font-weight: bold;
+	background-color: #ffffff;
+	padding: 5px;
+	text-align: right;
+	border-bottom: #000 1px solid;
+	border-right: #000 1px solid;
+}
+
+.td_listado{
+	background-color: #ffffff;
+	color: #000000;
+	padding: 4px;
+	border-bottom: #000 1px solid;
+}

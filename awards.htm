@@ -1,0 +1,666 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<map name="ingles_interior">
+	<area href=lng.htm?lng=eng coords="570,9,632,24" shape="rect">
+</map>
+<script src="scripts/general.js"></script>
+<script>
+function mostrar(id){
+	document.getElementById('0000002').style.display='none';
+document.getElementById('0000003').style.display='none';
+document.getElementById('0000004').style.display='none';
+document.getElementById('0000005').style.display='none';
+document.getElementById('0000006').style.display='none';
+document.getElementById('0000007').style.display='none';
+	//document.getElementById(id).style.display='inline';
+	$('#'+id).fadeIn(1500);
+}
+function mostrar_public(id){
+	var a = "p_"+id;
+	document.getElementById('p_0000003').style.display='none';
+document.getElementById('p_0000002').style.display='none';
+document.getElementById('p_0000004').style.display='none';
+	document.getElementById(a).style.display='inline';
+}
+</script>
+<link href="scripts/style.css" type=text/css rel=stylesheet>
+<title>Welcome to GARGI :: MUMBAI, INDIA</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+<style type="text/css">
+
+
+.dhtmlgoodies_question{	/* Styling question */
+	/* Start layout CSS */
+	color:#333;
+	font-size:0.9em;
+	background-color:#CBCBCB;
+	width:430px;
+	margin-bottom:2px;
+	margin-top:2px;
+	padding-left:2px;
+	background-image:url('images/bg_answer.gif');
+	background-repeat:no-repeat;
+	background-position:top right;
+	height:20px;
+	/* End layout CSS */
+	
+	overflow:hidden;
+	cursor:pointer;
+	padding-top: 2px;
+}
+.dhtmlgoodies_answer{	/* Parent box of slide down content */
+	/* Start layout CSS */
+	border:1px solid #c0c0c0;
+	background-color:#F0F0F0;
+	width:400px;
+	/* End layout CSS */
+	
+	visibility:hidden;
+	height:0px;
+	overflow:hidden;
+	position:relative;
+	padding-left: 10px;
+}
+.dhtmlgoodies_answer_content{	/* Content that is slided down */
+	padding:1px;
+	font-size:0.9em;	
+	position:relative;
+}
+
+</style>
+<script type="text/javascript">
+/************************************************************************************************************
+(C) www.dhtmlgoodies.com, November 2005
+
+This is a script from www.dhtmlgoodies.com. You will find this and a lot of other scripts at our website.	
+
+Terms of use:
+You are free to use this script as long as the copyright message is kept intact. However, you may not
+redistribute, sell or repost it without our permission.
+
+Thank you!
+
+www.dhtmlgoodies.com
+Alf Magne Kalleland
+
+************************************************************************************************************/
+
+var dhtmlgoodies_slideSpeed = 10;	// Higher value = faster
+var dhtmlgoodies_timer = 10;	// Lower value = faster
+
+var objectIdToSlideDown = false;
+var dhtmlgoodies_activeId = false;
+var dhtmlgoodies_slideInProgress = false;
+function showHideContent(e,inputId)
+{
+	if(dhtmlgoodies_slideInProgress)return;
+	dhtmlgoodies_slideInProgress = true;
+	if(!inputId)inputId = this.id;
+	inputId = inputId + '';
+	var numericId = inputId.replace(/[^0-9]/g,'');
+	var answerDiv = document.getElementById('dhtmlgoodies_a' + numericId);
+
+	objectIdToSlideDown = false;
+	
+	if(!answerDiv.style.display || answerDiv.style.display=='none'){		
+		if(dhtmlgoodies_activeId &&  dhtmlgoodies_activeId!=numericId){			
+			objectIdToSlideDown = numericId;
+			slideContent(dhtmlgoodies_activeId,(dhtmlgoodies_slideSpeed*-1));
+		}else{
+			
+			answerDiv.style.display='block';
+			answerDiv.style.visibility = 'visible';
+			
+			slideContent(numericId,dhtmlgoodies_slideSpeed);
+		}
+	}else{
+		slideContent(numericId,(dhtmlgoodies_slideSpeed*-1));
+		dhtmlgoodies_activeId = false;
+	}	
+}
+
+function slideContent(inputId,direction)
+{
+	
+	var obj =document.getElementById('dhtmlgoodies_a' + inputId);
+	var contentObj = document.getElementById('dhtmlgoodies_ac' + inputId);
+	height = obj.clientHeight;
+	if(height==0)height = obj.offsetHeight;
+	height = height + direction;
+	rerunFunction = true;
+	if(height>contentObj.offsetHeight){
+		height = contentObj.offsetHeight;
+		rerunFunction = false;
+	}
+	if(height<=1){
+		height = 1;
+		rerunFunction = false;
+	}
+
+	obj.style.height = height + 'px';
+	var topPos = height - contentObj.offsetHeight;
+	if(topPos>0)topPos=0;
+	contentObj.style.top = topPos + 'px';
+	if(rerunFunction){
+		setTimeout('slideContent(' + inputId + ',' + direction + ')',dhtmlgoodies_timer);
+	}else{
+		if(height<=1){
+			obj.style.display='none'; 
+			if(objectIdToSlideDown && objectIdToSlideDown!=inputId){
+				document.getElementById('dhtmlgoodies_a' + objectIdToSlideDown).style.display='block';
+				document.getElementById('dhtmlgoodies_a' + objectIdToSlideDown).style.visibility='visible';
+				slideContent(objectIdToSlideDown,dhtmlgoodies_slideSpeed);				
+			}else{
+				dhtmlgoodies_slideInProgress = false;
+			}
+		}else{
+			dhtmlgoodies_activeId = inputId;
+			dhtmlgoodies_slideInProgress = false;
+		}
+	}
+}
+
+
+
+function initShowHideDivs()
+{
+	var divs = document.getElementsByTagName('DIV');
+	var divCounter = 1;
+	for(var no=0;no<divs.length;no++){
+		if(divs[no].className=='dhtmlgoodies_question'){
+			divs[no].onclick = showHideContent;
+			divs[no].id = 'dhtmlgoodies_q'+divCounter;
+			var answer = divs[no].nextSibling;
+			while(answer && answer.tagName!='DIV'){
+				answer = answer.nextSibling;
+			}
+			answer.id = 'dhtmlgoodies_a'+divCounter;	
+			contentDiv = answer.getElementsByTagName('DIV')[0];
+			contentDiv.style.top = 0 - contentDiv.offsetHeight + 'px'; 	
+			contentDiv.className='dhtmlgoodies_answer_content';
+			contentDiv.id = 'dhtmlgoodies_ac' + divCounter;
+			answer.style.display='none';
+			answer.style.height='1px';
+			divCounter++;
+		}		
+	}	
+}
+window.onload = initShowHideDivs;
+</script>
+
+</head>
+<body class=body>
+<table border=0 cellpadding=0 cellspacing=0 width=1 align=center bgcolor=#FFFFFF>
+	<tr>
+		<td><img src=images/head1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head1_1.jpg></td>
+					<td width=100% style="background: url(images/head_1_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head2_2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head2.jpg></td>
+	</tr>
+	<tr>
+		<td valign=top style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head1_1_1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=854 align=center>
+				<tr>
+					<td valign=top>
+						<table border=0 cellpadding=0 cellspacing=0 width="318" align=center height="123">
+							<tr>
+								<td valign=top style="padding-bottom:4px;" colspan="3">
+								<map name="FPMap0">
+								<area href="index.htm" shape="rect" coords="31, 17, 100, 47">
+								</map>
+								<img src=images/logo_gargi.jpg border=0 usemap="#FPMap0"><map name="FPMap1"><area href="index.htm" shape="rect" coords="603, 22, 633, 45"></map><img src=images/bar.jpg border=0 width="665" height="63" usemap="#FPMap1"></td>
+							</tr>
+							<tr>
+								<td valign=top style="padding-bottom:4px;">
+			<a href="index.htm">
+			<img border="0" src="images/home_rotativa1_fondo.jpg" width="205" height="186"></a></td>
+								<td valign=top style="padding-bottom:4px;">
+								<p align="center">
+<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="541" height="186" id="newintro" align="right">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="flash/awards.swf" />
+<param name="quality" value="High" /><param name="bgcolor" value="#ffffff" />
+<param name="wmode" value="transparent">
+<embed src="flash/awards.swf" quality="High" bgcolor="#ffffff" width="541" height="186" name="newintro" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" />
+</object>
+								</td>
+								<td valign=top style="padding-bottom:4px;">
+			<img border="0" src="images/logo_ha.jpg" width="205" height="186" align="right"></td>
+							</tr>
+							</table>
+					</td>
+					<td width="1"><div id="admin_imagenesflash00010000098swf"></div>
+</td>
+				</tr>
+			</table>
+		</td>
+		<td valign=top style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head2_2_2.jpg></td>
+	</tr>
+
+
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"></td>
+		<td width=100% height=4>
+			</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"></td>
+	</tr>
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+		<td width=100%>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td valign=top style="padding: 0px 10px 3px 0px;">
+						<table border=0 cellpadding=0 cellspacing=0 width=1 align=center>
+							<tr>
+								<td><img src=images/botonera_top.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="background: url(images/botonera_fondo.jpg) repeat-y;">
+									<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+																			<tr>
+											<td width=100%><a href=about.htm class=item_menu>About Us</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=products.htm class=item_menu>Products</a></td>
+										</tr>
+																									<tr>
+											<td width=100%><a href=news.htm class=item_menu>
+											News / Events</font></a></td>
+										</tr>
+													
+																			<tr>
+											<td width=100%><a href=careers.htm class=item_menu>Careers</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=contact.htm class=item_menu>Contact Us</a></td>
+										</tr>
+																			
+																			<tr>
+											<td width=100%><a href=social.htm class=item_menu>
+											Social Responsibility</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=downloads.htm class=item_menu>
+											Downloads</a></td>
+										</tr>
+																								</table>
+								</td>
+							</tr>
+							<tr>
+								<td><img src=images/botonera_bottom.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="padding-top:3px;">
+								<img src=images/awards_top.jpg width="205" height="24"></td>
+							</tr>
+							<tr>
+								<td>
+								<img src=images/flash_awards.jpg width="205" height="995"></td>
+							</tr>
+							<tr>
+								<td><img src=images/awards_bottom.jpg width="205"></td>
+							</tr>
+							
+								</table>
+					</td>
+					<td width=100% style="padding: 0px 3px 0px 0px;" VALIGN="top"><table border=0 cellpadding=0 cellspacing=0 width=100% align=center VALIGN="top">
+	<tr>
+		<td>
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left 
+              border=0><TBODY>
+              <TR>
+                <TD 
+                style="PADDING-RIGHT: 4px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD>&nbsp;</TD></TR>
+                    <TR>
+                      <TD>
+						
+							<img src=images/item_prod.jpg border=0>&nbsp;<a href=structure.htm class=indice_prod>Gargi Group</a>&nbsp;&nbsp;
+						
+							<img src=images/item_prod.jpg border=0>&nbsp;<a href=philosophy.htm class=indice_prod>Philosophy</a>&nbsp;&nbsp;
+							
+							<img src=images/item_prod.jpg border=0>&nbsp;<a href=representations.htm class=indice_prod>Representations</a>&nbsp;&nbsp;
+																		
+							<img src=images/item_prod.jpg border=0>&nbsp;<a href=awards.htm class=indice_prod>Awards</a>&nbsp;&nbsp;
+												</TD></TR>
+                    <TR>
+                      <TD>&nbsp;</TD></TR>
+                    <TR>
+                      <TD><SPAN class=titulos_celeste>Awards</SPAN></TD></TR>
+                    <TR>
+                      <TD height="297" valign="top">
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <tr>
+					<td><div style="margin:10px 0px 10px 0px; background-image:url(images/puntos.jpg);"><img src=images/tran.gif></div></td>
+				</tr>
+                          <TR>
+                            <td valign=top style="padding-top:4px; padding-right:20px;">&nbsp;</td>
+                          </TR>
+                          <TR>
+                            <td valign=top style="padding-top:4px; padding-right:20px;">&nbsp;</td>
+                          </TR>
+                          <TR>
+                            <td valign=top style="padding-top:4px; padding-right:20px;">
+						
+						<div align="left">
+							<table border="0" width="98%" cellspacing="0" cellpadding="0">
+								<tr>
+									<td valign="top"><div class="dhtmlgoodies_question" style="width: 410px; height: 20px">
+							&nbsp;<b><span style="text-transform: uppercase; ">GARGI HÜTTENES-ALBERTUS PVT. LTD.</span></b></div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		
+			<table border="0" width="98%" cellspacing="0" cellpadding="0">
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top"><b>Kirloaskar Brothers Limited, 
+					Dewas And Sherwal<br></b>“Second Prize For Quality 
+					Performance, Theme Total Quality. Vendor Meet; 17th April 
+					2005”</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top"><b>Hindustan Organic Chemicals 
+					Limited (Government Of India Enterprises)</span></b><br>“The 
+					Best Performance Award In Phenol For The Outstanding 
+					Contribution During The Year 2003-2004” </td>
+				</tr>
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+									<td width="391" valign="top"><b>
+									<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+color:#767676">The Institute Of Indian Foundrymen </span></b>
+									<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:#767676">
+									<br>
+									“In Appreciation Of Our Support for 51st 
+									Indian Foundry Congress, January 2003, 
+									Jaipur ” </span></td>
+				</tr>
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top"><b>Basic Chemicals, 
+					Pharmaceuticals &amp; Cosmetics Export Promotion Council Mumbai 
+					– Chemexcil</span></b><br>“For The Outstanding Export 
+					Performance In Basic Inorganic &amp; Organic Chemicals During 
+					The Year 2001-2002”</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top"><b>Jamnalal Bajaj Uchit 
+					Vyavahar Puraskar<br></b>“Jamnalal Bajaj Prize For Fair 
+					Business Practices 1999”</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top"><b>Institute Of Marketing And 
+					Management </b><br>“Marketing Company Award Of The Institute 
+					1998, (Small Scale Sector)”</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top"><b>Shivaji Works Limited, 
+					Shivashahi, Sholapur <br></b>“Best Vendor, Quality Month 
+					November 1995” </td>
+				</tr>
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+					<td width="391" valign="top"><b>
+						DGP Hinoday Industries Ltd; Pune</span></b><br>
+						“Certificate Of Approval. Certifies That The Quality 
+					Management System Of The Supplier Has Been Assessed And 
+					Found To Be In Accordance With The Requirements Of Hinoday 
+					Standards” </td>
+				</tr>
+				<tr>
+					<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				<tr>
+									<td width="391" valign="top"><b>The 
+									Institute Of Indian Foundrymen </b><br>
+									“In Appreciation Of Your Contribution To The 
+									Golden Jubilee Celebration”</td>
+				</tr>
+				<tr>
+									<td width="391" valign="top">&nbsp;</td>
+				</tr>
+				</table>
+		
+	</div>
+</div>
+
+<br>
+<div class="dhtmlgoodies_question" style="width: 410px; height: 20px">
+							&nbsp;<b><span style="text-transform: uppercase; ">GARGI INDUSTRIES PVT. LTD.</span></b></div>
+<div class="dhtmlgoodies_answer" style="width: 400px; ">
+	<div>
+		
+							<table border="0" width="98%" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top"><b>OMEGA Foundry, Conference 2004, London	
+									<br>
+									</b>“Awarded as Top Agents Award” worldwide for sale of No-Bake Equipment  
+									</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top"><b>
+									<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+color:#767676">The Institute Of Indian Foundrymen </span></b>
+									<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;color:#767676">
+									<br>
+									“In Appreciation Of Our Organization On The 
+									Occasion Of The 44th Indian Foundry Congress 
+									IFEX’96 Exhibition, 8th To 11th February 
+									1996, Madras. ” </span></td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+								</table>
+						
+	</div>
+</div>
+
+<br>
+<div class="dhtmlgoodies_question" style="width: 410px; height: 20px">
+							&nbsp;<b><span style="text-transform: uppercase; ">GARGI ENGINEERING  ENTERPRISES PVT. LTD.</span></b></div>
+<div class="dhtmlgoodies_answer">
+	<div>
+		
+							<table border="0" width="98%" cellspacing="0" cellpadding="0">
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top"><b>Indian Foundry Congress 2008, Chennai <br>
+						</b>“Award for 2nd Best Stall at Exhibition”          (Photo Available)
+						</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">
+									<p style="line-height:12.0pt"><b>
+									<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+color:#767676">Kirlosakar Pneumatic Co.Ltd., Conference 2007, Kuala Lumpur
+									</span></b></p>
+									<p style="line-height:12.0pt"><b>
+									<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+color:#767676">“</span></b><span style="font-size: 8.5pt; font-family: Verdana,sans-serif; color: #767676">Awarded 
+									as India’s Largest Selling Dealer for 
+									Spares”</span></p>
+									</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">&nbsp;
+									</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top"><b>
+						<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+color:#767676">Indian Foundry Congress, 2006, Pune</span></b><p style="line-height:12.0pt">
+						<span style="font-size: 8.5pt; font-family: Verdana,sans-serif; color: #767676">
+						“Award for Best Stall at Exhibition ”&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></p>
+									</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top"><b>
+									<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+color:#767676">OMEGA Foundry, Conference 2006, London&nbsp;&nbsp;&nbsp; <br>
+									“</span></b><span style="font-size: 8.5pt; font-family: Verdana,sans-serif; color: #767676">Awarded 
+									as Most Consistent Sales over 10 year 
+									Period” worldwide for sale of No-Bake 
+									Equipment.</span></td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">
+									<p style="line-height:12.0pt"><b>
+									<span style="font-size:8.5pt;font-family:&quot;Verdana&quot;,&quot;sans-serif&quot;;
+color:#767676">Kirlosakar Pneumatic Co.Ltd., Conference 2006,&nbsp; Bangkok </span></b></p>
+									<p style="line-height:12.0pt">
+									<span style="font-size: 8.5pt; font-family: Verdana,sans-serif; color: #767676">
+									“Awarded as India’s Largest Selling Dealer 
+									for Spares”</span></p>
+									</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+								<tr>
+									<td width="618" valign="top"><b>
+												Council For Fair Business Practices - Jamnalal Bajaj 
+						Uchit Vyavahar Puraskar</span></b>						<br>
+						“In Recognition Of The Distinguished Contribution To The 
+						Promotion Of The Code Of Conduct Laid Down By The 
+						Council, 1997” </td>
+								</tr>
+								<tr>
+									<td width="618" valign="top">&nbsp;</td>
+								</tr>
+							</table>
+						
+	</div>
+</div>
+
+</td>
+									<td width="9" rowspan="2">
+									<p align="center">&nbsp;</p>
+									<p align="center">&nbsp;</td>
+								</tr>
+								<tr>
+									<td valign="top">&nbsp;</td>
+								</tr>
+								</table>
+						</div>
+						<p>&nbsp;<p>&nbsp;</td></TR>
+                                
+                                
+                                
+                                
+                                </TBODY></TABLE>
+						</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+		</td>
+	</tr>
+</table>					
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+	</tr>
+	<tr>
+		<td valign=bottom style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head4_4_4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/cierre1.jpg></td>
+					<td width="100%" style="background-color:#499dff; color:white;">Designed by :  <a target="_blank" href="http://ibridgedigital.com/" class=cierre>iBridge Digital</a></td>
+					<td width=100% bgcolor=#499DFF>
+						<div align="right">
+						<table border=0 cellpadding=0 cellspacing=0 width=750 align=center>
+							<tr>
+								<td width="636">&nbsp;</td>
+								<td width="27"><a href=index.htm class=cierre>Home</a></td>
+								<td style="padding: 0px 6px 0px 5px;"><img src=images/cierre_separa.jpg></td>
+								<td width="74"><a href=terms.htm class=cierre>Terms of Use</a></td>
+								<td style="padding: 0px 6px 0px 5px;" width="1"><img src=images/cierre_separa.jpg></td>
+								<td width="80"><a href=privacy.htm class=cierre>Privacy Policy</a></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+					<td bgcolor=#499DFF style="color:#FFF">&nbsp;</td>
+					<td><img src=images/cierre2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td valign=bottom style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head3_3_3.jpg></td>
+	</tr>
+	<tr>
+		<td><img src=images/head4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head4_4.jpg></td>
+					<td width=100% style="background: url(images/head_3_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head3_3.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head3.jpg></td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11367858-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>

@@ -1,0 +1,27 @@
+﻿<?xml version="1.0"?> 
+<Banner 
+	bannerWidth="325"
+	bannerHeight="160"
+	
+	transitionType="6"
+	transitionDelayTimeFixed="4" 
+	transitionDelayTimePerWord=".5"
+	transitionSpeed="8"
+	transitionBlur="yes"
+	transitionRandomizeOrder="no"	
+	
+	showTimerClock="yes"
+	showBackButton="yes"
+	showNumberButtons="no"
+	showNumberButtonsAlways="no"
+	showNumberButtonsHorizontal="no"
+	showNumberButtonsAscending="no"
+	autoPlay="yes">
+	<item image="images/coatings.jpg"></item>
+	<item image="images/coatings1.jpg"></item>
+ <item image="images/coatings2.jpg"></item>
+ <item image="images/coatings3.jpg"></item>
+ <item image="images/coatings4.jpg"></item>
+ <item image="images/coatings5.jpg"></item>
+</Banner>
+

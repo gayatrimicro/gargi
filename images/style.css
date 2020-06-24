@@ -1,0 +1,363 @@
+body{
+	font-family: Verdana;
+	background: #d4f793;
+	color: #000;
+	background: #E6E6E6;
+	margin: 0;
+	padding: 0;
+}
+
+#panel{
+	margin-left: 25px;
+	font-size: 16px;
+	font-weight: bold;
+	color: #fff;
+}
+
+
+.header{
+	padding: 0;
+	margin: 0;
+	border-bottom: #fff 1px solid;
+}
+
+.bienvenido{
+	background: #838383;
+	font-size: 11px;
+	color: #fff;
+	padding: 0 0 0 5px;
+	border-bottom: #fff 6px solid;
+	margin: 0;
+}
+
+.bienvenido b{
+	color: #333;
+}
+
+img{
+	vertical-align: middle;
+	border: 0;
+}
+
+table{
+	padding: 0;
+	margin: 0;
+}
+
+.controles{
+	background: #494949;
+	border-left: 1px solid #fff;
+	padding: 2px;
+	text-align: center;
+}
+
+.controles a:link{ color: #fff; }
+.controles a:visited{ color: #fff; }
+.controles a:hover{ color: #fff; text-decoration: underline; }
+
+.controles img{
+	margin-right: 4px;
+}
+
+
+/*
+
+*/
+
+
+A:link { text-decoration: none; color: #515151; }
+A:visited { text-decoration: none; color: #515151; }
+A:hover { text-decoration: underline; color: #515151; }
+
+A.link_menu:link { text-decoration: none; color: #ffffff; ;}
+A.link_menu:visited { text-decoration: none; color: #ffffff;}
+A.link_menu:hover { text-decoration: none; color: #ffffff;}
+
+A.enlistado:link { text-decoration: underline; color: #ffffff;  }
+A.enlistado:visited { text-decoration: underline; color: #ffffff; }
+A.enlistado:hover { text-decoration: underline; color: #ffffff; background-color: #444444}
+
+A.link_home:link { text-decoration: none; color: #515151;  }
+A.link_home:visited { text-decoration: none; color: #515151;  }
+A.link_home:hover { text-decoration: none; color: #515151;  }
+
+.d16 {FONT-SIZE: 16px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d15 {FONT-SIZE: 15px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d14 {FONT-SIZE: 14px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d13 {FONT-SIZE: 13px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d12 {FONT-SIZE: 12px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d11 {FONT-SIZE: 11px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d10 {FONT-SIZE: 10px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d9 {FONT-SIZE: 9px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+.d8 {FONT-SIZE: 8px;;FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;}
+
+.texto_general{
+	color: #ffffff;
+}
+
+
+div,td,input,textarea,caption{
+	FONT-SIZE: 11px;
+	FONT-FAMILY: Verdana,Arial,Helvetica,sans-serif;
+}
+
+.tbl_top{
+	width: 100%;
+	padding: 0px;
+	border: 6px solid #fff;
+}
+
+
+.tit1{
+	font-weight: bold;
+	font-size: 16px;
+	color: #ffffff;
+}
+
+.tit2{
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.tit3{
+	font-weight: bold;
+	font-size: 14px;
+	color: #ffffff;
+}
+
+.main{
+	background-color: #E6E6E6;
+	color: #000000;
+	padding: 10px 15px 15px 15px;
+}
+
+.tbl_menu{
+	width: 170px;
+	margin: 0;
+	vertical-align: middle;
+}
+
+.td_menu{
+	border-bottom: #B6B6B6 1px solid;
+	padding: 6px 2px 6px 2px;
+	background-color: #494949;
+	vertical-align: middle;
+}
+
+.grupo{
+	border-bottom: #B8B8B8 1px solid;
+	padding: 9px 5px 9px 4px;
+	background-color: #838383;
+	margin: 0;
+	color: #ffffff;
+	font-size: 14px;
+	font-weight: bold;
+}
+
+.img_menu{
+	padding-right: 2px;	
+}
+	
+
+.tbl_home{
+	background-color: #6d6d6d;
+	border: #B3B3B3 1px solid;
+	width: 205px;
+	padding: 10px;
+    float:left;
+	margin: 8px;
+	color: #ffffff;
+}
+
+.tbl_home_centrodenegocios{
+	background-color: #1D73BC;
+	padding: 10px;
+}
+
+.bl_home_usuarios_admin{
+	background-color: #7A7A7A;
+	padding: 10px;
+}
+
+.tbl_home_int{
+	background-color: #D3D3D3;
+	padding: 8px;
+	text-align: center;
+}
+
+.tbl_login{
+	border-bottom: #B6B6B6 1px solid;
+	width: 320px;
+}
+
+.txt_login{
+	font-size: 14px;
+	color: #9B9D9C;
+	font-weight: bold;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.tbl_error_login{
+	border-bottom: #B6B6B6 1px solid;
+	width: 320px;
+}
+
+.txt_error_login{
+	font-size: 14px;
+	color: #9B9D9C;
+	font-weight: bold;
+	padding-bottom: 8px;
+	padding-top: 8px;
+}
+
+.tbl_login_input{
+	text-align: right;
+	width: 1px;
+	width: 320px;
+	border-top: #E6E6E6 5px solid;
+}
+
+.tbl_login_input_1{
+	background-color: #6d6d6d;
+	text-align: right;
+	color: #ffffff;
+	font-weight: bold;
+	padding: 5px 5px 5px 5px;
+}
+
+.tbl_login_input_2{
+	background-color: #C0C0C0;
+	text-align: left;
+	color: #ffffff;
+	font-weight: bold;
+	width: 100%;
+}
+
+.titulo_general{
+	font-size: 16px;
+	font-weight: bold;
+	color: #6E6E6E;
+}
+
+.subtitulo_general{
+	font-size: 14px;
+	font-weight: bold;
+	color: #6E6E6E;
+}
+
+.tbl_titulo_general{
+	border-bottom: #B3B3B3 1px solid;
+}
+
+.td_titulo_general{
+	border-left: #B3B3B3 1px solid;
+}
+
+.td_listado_head{
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #494748;
+	font-size: 12px;
+	padding: 5px;
+}
+
+.td_listado_head a:hover{
+	color: #ffffff; text-decoration: none;
+}
+.td_listado_head a:link{
+	color: #ffffff; text-decoration: none;
+}
+.td_listado_head a:visited{
+	color: #ffffff; text-decoration: none;
+}
+
+.td_listado_1era_col{
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #6d6d6d;
+	padding: 3px 4px 3px 4px;
+	text-align: right;
+}
+
+.td_listado{
+	background-color: #9B999A;
+	color: #ffffff;
+	padding: 3px 4px 3px 4px;
+	vertical-align: middle;
+}
+
+.td_listado_2{
+	color: #ffffff;
+	padding: 3px 4px 3px 4px;
+	vertical-align: middle;
+}
+
+.td_warning_1{
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #C82515;
+	padding: 5px;
+	text-align: right;
+}
+
+.td_warning_2{
+	background-color: #ffffff;
+	color: #C82515;
+	padding: 4px;
+}
+
+
+
+.comandos{
+	margin-left: 1px;
+	/*border-left: #E6E6E6 1px solid;*/
+}
+
+.cartel{
+	background-color: #E8EEFA;
+	border: #6699CC 1px solid;
+	padding: 6px;
+	margin: 0px;
+}
+
+.caption_upload{
+	color: #fff;
+	font-weight: bold;
+}
+
+.input_upload{
+	width: 500px;
+	font-size: 11px;
+}
+
+.ayuda{
+	color: #ffffff;
+	font-weight: bold;
+	background-color: #6A2614;
+	padding: 5px;
+	font-size: 14px;
+}
+
+
+.border1{
+	color: #ffffff;
+	padding: 2px;
+}
+
+.border2{
+	border-bottom: #ffffff 1px solid;
+	border-right: #ffffff 1px solid;
+	color: #ffffff;
+	padding: 2px;
+}
+
+.img{
+	vertical-align: middle;
+	border: 0;
+}
+
+input,select{
+	font-weight: normal;
+}

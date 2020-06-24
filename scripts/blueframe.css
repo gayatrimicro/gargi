@@ -1,0 +1,15 @@
+@import url( /styles/gentleblue.css );
+
+@media Screen, Tv, Handheld, Projection    
+{
+#content H2 {
+	PADDING-RIGHT: 35px; PADDING-LEFT: 35px; BACKGROUND: url(../wrongWithIE/eightpointbox/right.gif) #a5c0db repeat-y 100% 0%; PADDING-BOTTOM: 0px; OVERFLOW: hidden; COLOR: #000; PADDING-TOP: 0px; max-width: 1000px; text-shadow: #58b 3px 3px 3px
+}
+#content H2:unknown {
+	DISPLAY: block; BACKGROUND: url(../wrongWithIE/eightpointbox/topright.gif) no-repeat 100% 0%; MARGIN: 0px -35px; HEIGHT: 28px; content: url(../wrongWithIE/eightpointbox/topleft.gif)
+}
+UNKNOWN {
+	DISPLAY: block; BACKGROUND: url(../wrongWithIE/eightpointbox/bottomright.gif) no-repeat 100% 0%; FLOAT: none; MARGIN: 10px -35px 0px; HEIGHT: 30px; content: url(../wrongWithIE/eightpointbox/bottomleft.gif)
+}
+
+}

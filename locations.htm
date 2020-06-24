@@ -1,0 +1,697 @@
+<html>
+<head>
+<meta http-equiv="Content-Language" content="en-us">
+<script src="scripts/AC_RunActiveContent.js" type="text/javascript"></script>
+<style type="text/css">
+<!--
+.style1 {color: #81bcff}
+-->
+</style>
+<map name="ingles_interior">
+	<area href=lng.htm?lng=eng coords="570,9,632,24" shape="rect">
+</map>
+<script src="scripts/general.js"></script>
+<script>
+function mostrar(id){
+	document.getElementById('0000002').style.display='none';
+document.getElementById('0000003').style.display='none';
+document.getElementById('0000004').style.display='none';
+document.getElementById('0000005').style.display='none';
+document.getElementById('0000006').style.display='none';
+document.getElementById('0000007').style.display='none';
+	//document.getElementById(id).style.display='inline';
+	$('#'+id).fadeIn(1500);
+}
+function mostrar_public(id){
+	var a = "p_"+id;
+	document.getElementById('p_0000003').style.display='none';
+document.getElementById('p_0000002').style.display='none';
+document.getElementById('p_0000004').style.display='none';
+	document.getElementById(a).style.display='inline';
+}
+</script>
+<script language="JavaScript">
+function pressed(contactus)
+{
+var addressl,m,s,ct,ct1,cm,mlen,mspace;
+email1=contactus.Email.value;
+mlen=contactus.Email.value.length;
+l=contactus.Email.value.length;
+ct=0;
+ct1=0;
+var emsg="";
+if (contactus.Name.value=="")
+emsg+=("\n Name")
+
+
+//if (contactus.Company.value=="")
+//emsg+=("\n Company")
+
+if (contactus.Phone.value=="")
+emsg+=("\n Telephone")
+
+if (contactus.Email.value=="")
+emsg+=("\n Email ID")
+
+
+else
+{for(m=0;m<l;m++)
+{
+s=email1.substr(m,1)
+
+if(s=="@")
+{
+	if (ct>0)
+		{
+		alert("\n Invalid Email ID")
+		contactus.Email.focus()
+		contactus.Email.select()
+		return false;
+				}
+	else
+	{
+	ct=m;
+	}
+}
+if(s==" ")
+mspace=l;
+if(s==".")
+ct1=1;
+}
+if(ct<1||ct1==0 || mlen<5 || mspace>0)
+{
+alert("\n Invalid Email ID")
+contactus.Email.focus()
+contactus.Email.select()
+return false;
+
+}
+}
+
+if (emsg!="")
+{
+alert("Please Enter following Data\n" + emsg)
+return false;
+}
+
+if(validate(contactus.Phone))
+return true;
+else
+return false;
+
+function validate(field) {
+var valid = " +()-0123456789"
+var ok = "yes";
+var temp;
+for (var i=0; i<field.value.length; i++) {
+temp = "" + field.value.substring(i, i+1);
+if (valid.indexOf(temp) == "-1") ok = "no";
+}
+if (ok == "no") {
+alert("Invalid entry!  Only characters and numbers are accepted!");
+field.focus();
+field.select();
+return false;
+  }
+  else
+  return true;
+}
+
+
+}
+
+    </script>
+<link href="scripts/style.css" type=text/css rel=stylesheet>
+<title>Welcome to GARGI :: MUMBAI, INDIA</title>
+<link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+</head>
+<body class=body>
+<table border=0 cellpadding=0 cellspacing=0 width=1 align=center bgcolor=#FFFFFF>
+	<tr>
+		<td><img src=images/head1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head1_1.jpg></td>
+					<td width=100% style="background: url(images/head_1_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head2_2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head2.jpg></td>
+	</tr>
+	<tr>
+		<td valign=top style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head1_1_1.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=854 align=center>
+				<tr>
+					<td valign=top>
+						<table border=0 cellpadding=0 cellspacing=0 width="318" align=center height="123">
+							<tr>
+								<td valign=top style="padding-bottom:4px;" colspan="3">
+								<map name="FPMap0">
+								<area href="index.htm" shape="rect" coords="31, 17, 100, 47">
+								</map>
+								<img src=images/logo_gargi.jpg border=0 usemap="#FPMap0"><map name="FPMap1"><area href="index.htm" shape="rect" coords="603, 22, 633, 45"></map><img src=images/bar.jpg border=0 width="665" height="63" usemap="#FPMap1"></td>
+							</tr>
+							<tr>
+								<td valign=top style="padding-bottom:4px;">
+			<a href="index.htm">
+			<img border="0" src="images/home_rotativa1_fondo.jpg" width="205" height="186"></a></td>
+								<td valign=top style="padding-bottom:4px;">
+								<p align="center">
+<script type="text/javascript">
+AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0','width','541','height','186','id','newintro','align','right','src','images/newintro','quality','High','bgcolor','#ffffff','name','newintro','allowscriptaccess','sameDomain','pluginspage','http://www.macromedia.com/go/getflashplayer','wmode','transparent','movie','images/newintro' ); //end AC code
+</script><noscript><object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=8,0,0,0" width="541" height="186" id="newintro" align="right">
+<param name="allowScriptAccess" value="sameDomain" />
+<param name="movie" value="images/newintro.swf" />
+<param name="quality" value="High" /><param name="bgcolor" value="#ffffff" />
+<param name="wmode" value="transparent">
+<embed src="images/newintro.swf" quality="High" bgcolor="#ffffff" width="541" height="186" name="newintro" align="middle" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" wmode="transparent" />
+</object></noscript>
+								</td>
+								<td valign=top style="padding-bottom:4px;">
+			<img border="0" src="images/logo_ha.jpg" width="205" height="186" align="right"></td>
+							</tr>
+							</table>
+					</td>
+					<td width="1"><div id="admin_imagenesflash00010000098swf"></div>
+</td>
+				</tr>
+			</table>
+		</td>
+		<td valign=top style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head2_2_2.jpg></td>
+	</tr>
+
+
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"></td>
+		<td width=100% height=4>
+			</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"></td>
+	</tr>
+	<tr>
+		<td style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+		<td width=100%>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td valign=top style="padding: 0px 10px 3px 0px;">
+						<table border=0 cellpadding=0 cellspacing=0 width=1 align=center>
+							<tr>
+								<td><img src=images/botonera_top.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="background: url(images/botonera_fondo.jpg) repeat-y;">
+									<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+																			<tr>
+											<td width=100%><a href=about.htm class=item_menu>About Us</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=products.htm class=item_menu>Products</a></td>
+										</tr>
+																									<tr>
+											<td width=100%><a href=news.htm class=item_menu>News / Events</a></td>
+										</tr>
+													
+																			<tr>
+											<td width=100%><a href=careers.htm class=item_menu>Careers</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=contact.htm class=item_menu>Contact Us</a></td>
+										</tr>
+																			
+																			<tr>
+											<td width=100%><a href=social.htm class=item_menu>
+											Social Responsibility</a></td>
+										</tr>
+																			<tr>
+											<td width=100%><a href=downloads.htm class=item_menu>
+											Downloads</a></td>
+										</tr>
+																								</table>
+								</td>
+							</tr>
+							<tr>
+								<td><img src=images/botonera_bottom.jpg width="205"></td>
+							</tr>
+							<tr>
+								<td style="padding-top:3px;">
+								<img src=images/awards_top.jpg width="205" height="24"></td>
+							</tr>
+							<tr>
+								<td style="padding-top:0px;">
+								<img src=images/flash_awards.jpg width="205" height="822"></td>
+							</tr>
+							<tr>
+								<td></td>
+							</tr>
+							<tr>
+<td><img src=images/awards_bottom.jpg width="205"></td>
+							</tr>
+							
+								</table>
+					</td>
+					<td width=100% style="padding: 0px 3px 0px 0px;" VALIGN="top"><table border=0 cellpadding=0 cellspacing=0 width=100% align=center VALIGN="top">
+	<tr>
+		<td>
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left 
+              border=0><TBODY>
+              <TR>
+                <TD 
+                style="PADDING-RIGHT: 4px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
+                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center 
+                  border=0>
+                    <TBODY>
+                    <TR>
+                      <TD colspan="2">&nbsp;</TD></TR>
+                    <TR>
+                      <TD width="59%"><span class=titulos>Office Locations</span></TD>
+                      <TD width="41%">
+						<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0 id="table2">
+                          <tr>
+																<td  width="18">
+																<img border="0" src="images/mas.jpg" width="9" height="9"></td>
+																<td width="93%"><a href="dealers.htm" class=titulo_resumen>Our Dealers</a> 
+</td>
+															</tr>
+                          </TABLE>
+						</TD></TR>
+                    <TR>
+                      <TD height="333" valign="top" colspan="2">
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        align=center border=0>
+                          <TBODY>
+                          <tr>
+					<td><div style="margin:10px 0px 10px 0px; background-image:url(images/puntos.jpg);"><img src=images/tran.gif></div></td>
+				</tr>
+                                
+                                
+                                
+                                
+                          <tr>
+					<td>
+										Find a Gargi Office near you to know 
+										about our products. <table border="0" width="100%" cellspacing="0" cellpadding="0">
+											<tr>
+												<td width="331">&nbsp;</td>
+												<td width="11" rowspan="37">
+												<p align="center">&nbsp;</td>
+												<td width="5" rowspan="37">&nbsp;												</td>
+												<td width="1" rowspan="37" bgcolor=#E1ECFE>												</td>
+												<td width="7" rowspan="37">&nbsp;												</td>
+												<td width="13" rowspan="37">&nbsp;												</td>
+												<td>&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top"><font color="#0273FD"><b>Ahmedabad</b></font> 
+								<p><b>Contact:</b>Mr. Surendrasinh Solanki<br>
+								<b>Mobile: </b>+91 9978685544</p>
+								<p><b>E-mail:</b>
+								<a class=mas_info href="mailto:surendrasinh.solanki@gargi-india.com">
+								surendrasinh.solanki@gargi-india.com</a>												</td>
+												<td valign="top">
+											<font color="#0273FD"><b>Hyderabad</b></font><p>
+											<b>Contact</b><strong>: </strong>Mr. 
+											Yogesh Upadhyaya</p>
+											<p> 
+											<b>Mobile</b><strong>:</strong> 
+											+91&nbsp;9951966872<strong><br>
+											E-mail:</strong><a href="mailto:gargihyd@gmail.com" target="_blank" class="mas_info"> gargihyd@gmail.com</a></p>													
+											</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												
+											</tr>
+											<tr>
+												<td width="331" valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+												
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">
+											<font color="#0273FD"><b>Bangalore</b></font> 
+											<br>
+											<b>Contact</b><strong>:</strong> Mr. 
+											P.K. Satisha<p><b>Mobile: </b>+91 
+											9449852089</p>
+										<p><b>E-mail:</b>
+								<a class=mas_info href="mailto:gargi_banglore@yahoo.com">
+								gargi_banglore@yahoo.com</a>
+                                
+                                
+                                <br>  <br>
+											<b>Contact</b><strong>:</strong> Mr. 
+											Krupa Shankar<p><b>Mobile: </b>+91 
+											9845664554</p>
+										<p><b>E-mail:</b>
+								<a class=mas_info href="mailto:krupashankar@gargi-india.com">
+								krupashankar@gargi-india.com</a>
+                                												</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+												<td valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">
+											<font color="#0273FD"><b>Baroda </b></font> 
+											<br>
+											<b>Contact</b><strong>:</strong> Mr. 
+											C. Wallace<p><b>Mobile: </b>+91 
+											9925014048</p>
+											<p><b>E-mail</b><strong>:</strong>
+								<a class=mas_info href="mailto:gargibaroda@gari-india.com">
+								gargibaroda@gari-india.com</a></p>												</td>
+												<td valign="top">
+											<font color="#0273FD"><b>Jamshedpur</b></font> 
+											<br>
+											<b>Contact</b><strong>: </strong>Mr. 
+											K. K. Sinha<p><b>Mobile: </b>+91 
+											9431117332</p>
+											<p><b>E-mail:</b>&nbsp;<a href="mailto:ceramicsindia@yahoo.co.in" target="_blank" class="mas_info">ceramicsindia@yahoo.co.in</a></p>
+											</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+												<td valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">
+											<font color="#0273FD"><b>Belgaum</b></font> 
+											<p>
+											<strong>Address: </strong>
+											Mr. Raju Somani</p>
+								<p><strong>Mobile: </strong>+91 9922996040
+</p>
+											<p><b>E-mail: </b>
+											<a href="mailto:gargi_dav@gmail.com" target="_blank" class="mas_info">klp_gargikop@sancharnet.in</a>												</td>
+												<td valign="top">
+											<font color="#0273FD"><b>Kolhapur</b></font> 
+											<br>
+											<b>Contact</b><strong>: </strong>Mr. 
+											Raju Somani<p><b>Mobile: </b>
+											+91 9922996040 </p>
+								<p><strong>E-mail: </strong>
+								<a class=mas_info href="mailto:klp_gargikop@sancharnet.in">
+								klp_gargikop@sancharnet.in</a></p>	
+                                
+                                
+                                <br>
+											<b>Contact</b><strong>: </strong>Mr. Shashikant Sawant<p><b>Mobile: </b>
+											+91 9422057793</p>
+								<p><strong>E-mail: </strong>
+								<a class=mas_info href="mailto:sawantshashikant.2008@rediffmail.com">
+								sawantshashikant.2008@rediffmail.com</a></p>											
+												</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+												<td valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">
+											<font color="#0273FD"><b>Bhilai </b></font> 
+											<p>
+											<b>Contact</b><strong>:</strong> Mr. 
+											Goutam Dutta</p>
+								<p><b>Mobile: </b>+91 9329104748</p>
+								<p><strong>E-mail: </strong>
+								<a class=mas_info href="mailto:gargibhilai@yahoo.com">
+								gargibhilai@yahoo.com</a> </p>												</td>
+												<td valign="top">
+											<font color="#0273FD"><b>Kolkata</b></font>
+								<br>
+											<b>Contact</b><strong>: </strong>Mr. 
+											Sanjay Ghosh<p><strong>Mobile:</strong> 
+											+91 9836515284</p>
+								<p><strong>E-mail: </strong>
+								<a class=mas_info href="mailto:gargi.kolkatta@gmail.com">
+								gargi.kolkatta@gmail.com</a> </p>
+											</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">
+								<hr style="border: 1px dotted #BBBBBB">												</td>
+												<td valign="top">
+								<hr style="border: 1px dotted #BBBBBB">												</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">
+											<font color="#0273FD"><b>Chandigarh</b></font> 
+											<br>
+											<b>Contact:</b> Mr. Viney 
+											Luthra<p><b>Mobile</b><strong>:</strong> 
+											+91 9814017532</p>
+								<p><strong>E-mail:
+								</strong>
+								<a href="mailto:gargi_chandigarh@yahoo.co.in" target="_blank" class="mas_info">gargi_chandigarh@yahoo.co.in</a> </p>
+								<p></p></td>
+											  <td valign="top">
+											<font color="#0273FD"><b>Mumbai</b></font> 
+											<br>
+                                        
+											<b>Contact</b><strong>:</strong> Mr. Ramesh Menon<p><b>Mobile</b><strong>:</strong> +91 
+								8879042566</p>
+								<p><b>E-mail</b><strong>:</strong>
+								<a class=mas_info href="mailto:rameshmenon@gargi-india.com">
+								rameshmenon@gargi-india.com</a></p>												
+											</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+												<td valign="top"><hr style="border: 1px dotted #BBBBBB">												</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">&nbsp;</td>
+												<td valign="top">&nbsp;</td>
+											</tr>
+											<tr>
+												<td width="331" valign="top">
+											<font color="#0273FD"><b>Chennai</b></font> 
+											<p>
+											<b>Contact:</b> Mr. P. 
+											Muralidharan</p>
+								<p><b>Mobile</b><strong>:</strong> +91 
+								9840022505</p>
+								<p><strong>E-mail:</strong>
+								<a class=mas_info href="mailto:gargi_chennai@rediffmail.com">
+								gargi_chennai@rediffmail.com</a></p>												</td>
+												<td valign="top">
+												<font color="#0273FD"><b>Pune</b></font>
+												<br>
+												<b>Contact</b><strong>:</strong> 
+												Mr. Nishikant Ejrekar<p><b>Mobile</b><strong>:</strong> 
+												+91 9850399485</p>
+												<p><strong>E-mail: </strong>
+												<a class="mas_info" href="mailto:nishikantejrekar@gargi-india.com">
+												nishikantejrekar@gargi-india.com</a><br>
+												<br>
+                                                <br>
+                                                <strong>Contact</strong>: Mr. Vinayak Ghotge
+                                                <br>
+                                                <strong>Mobile</strong>: +91 9423500655
+                                                <br>
+                                                <strong>Email :</strong> <a class="mas_info" href="mailto:vinayakghotge@gargi-india.com">vinayakghotge@gargi-india.com</a>
+											  </td>
+												</tr>
+												<tr>
+													<td width="331" valign="top">&nbsp;</td>
+													<td valign="top">&nbsp;</td>
+												</tr>
+												<tr>
+													<td width="331" valign="top"><hr style="border: 1px dotted #BBBBBB">													</td>
+													<td valign="top"><hr style="border: 1px dotted #BBBBBB">													</td>
+												</tr>
+												<tr>
+													<td width="331" valign="top">&nbsp;</td>
+													<td valign="top">&nbsp;</td>
+												</tr>
+												<tr>
+													<td width="331" valign="top">
+											<font color="#0273FD"><b>Coimbatore</b></font>
+								<br>
+                                
+                                
+											<b>Contact:</b> Mr. E. Anand<p><b>Mobile</b><strong>: </strong>
+											+91 9843018855</p>
+											<p><strong>E-mail: </strong>
+								<a class=mas_info href="mailto:gargicbe@gargi-india.com">
+								gargicbe@gargi-india.com</a></p>	
+                                	<br>
+                              <b>Contact:</b>  Mr. A. Boopathi<p><b>Mobile</b><strong>: </strong>
+											+91 9843177622</p>
+											<p><strong>E-mail: </strong>
+								<a class=mas_info href="mailto:aboopathi@gargi-india.com">
+								aboopathi@gargi-india.com</a></p>											  </td>
+													<td valign="top"><p><font color="#0273FD"><b>Rajkot</b></font> <br>
+                                                        <b>Contact</b><strong>:</strong> Mr. 
+											Surendrasinh Solanki </p>
+													  <p><b>Mobile</b><strong>:</strong> +91 
+													    9978685544</p>
+                                                  <p><strong>E-mail:</strong> <a href="mailto:surendrasinh.solanki@gargi-india.com" target="_blank" class="mas_info">surendrasinh.solanki@gargi-india.com</a></p>                                                      <p>&nbsp;</td>
+												</tr>
+												<tr>
+													<td width="331" valign="top">&nbsp;</td>
+													<td valign="top">&nbsp;</td>
+												</tr>
+												<tr>
+												  <td width="331" valign="top"><hr style="border: 1px dotted #BBBBBB"></td>
+													<td valign="top"><hr style="border: 1px dotted #BBBBBB">													</td>
+												</tr>
+												<tr>
+													<td width="331" valign="top">&nbsp;</td>
+													<td valign="top">&nbsp;</td>
+												</tr>
+												<tr>
+													<td width="331" valign="top">
+											<font color="#0273FD"><b>Delhi</b></font><br>
+											<b>Contact:</b> Mr. Kuldip Kaushik<b><br>
+																						Mobile: </b>+91 9354486949 <br>
+								<p><strong>E-mail:</strong> <a href="mailto:gargi_bhiwadi@yahoo.com"  class="mas_info">gargi_bhiwadi@yahoo.com</a></p>													</td>
+												  <td valign="top"><p><font color="#0273FD"><b>Solapur</b></font> <br>
+                                                      <b>Contact</b><strong>:</strong> Mr. 
+											Sunil Gurav                                                   
+                                                    <p><b>Mobile</b><strong>:</strong> +91 
+                                                      9822092040</p>
+                                                    <p><strong>E-mail:</strong> <a href="mailto:gargi.solapur@gmail.com" target="_blank" class="mas_info">gargi.solapur@gmail.com</a></p>
+                                                    <p>                                                  
+                                                    <p><br>
+                                                    </p></td>
+												</tr>
+                                                
+                                              
+                                                
+                                                
+												<tr>
+													<td width="331" valign="top">&nbsp;</td>
+													<td>&nbsp;</td>
+												</tr>
+												<tr>
+													<td width="331" valign="top">&nbsp;</td>
+													<td>&nbsp;</td>
+												</tr>
+												<tr>
+													<td width="331"><p align="right"><img border="0" src="images/item_prod.jpg" width="9" height="9">
+								<a class=mas_info href="#top">
+								Back to top</a></td>
+													<td>&nbsp;</td>
+												</tr>
+											</table>
+										</td>
+				</tr>
+                                
+                                
+                                
+                                
+                                </TBODY></TABLE>
+						<table border=0 cellpadding=0 cellspacing=0 width=100%>
+	<tr>
+		<td align=left>&nbsp;
+</td>
+	</tr>
+	</table>
+						</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
+		</td>
+	</tr>
+</table>					
+					</td>
+				</tr>
+			</table>
+		</td>
+		<td style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/tran.gif width=14></td>
+	</tr>
+	<tr>
+		<td valign=bottom style="background: url(images/head_4_fondo.jpg) repeat-y;"><img src=images/head4_4_4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/cierre1.jpg></td>
+					<td width="100%" style="background-color:#499dff; color:white;">Designed by :  <a target="_blank" href="http://ibridgedigital.com/" class=cierre>iBridge Digital</a></td>
+					<td width=100% bgcolor=#499DFF>
+						<div align="right">
+						<table border=0 cellpadding=0 cellspacing=0 width=750 align=center>
+							<tr>
+								<td width="636">&nbsp;</td>
+								<td width="27"><a href=index.htm class=cierre>Home</a></td>
+								<td style="padding: 0px 6px 0px 5px;"><img src=images/cierre_separa.jpg></td>
+								<td width="74"><a href=terms.htm class=cierre>Terms of Use</a></td>
+								<td style="padding: 0px 6px 0px 5px;" width="1"><img src=images/cierre_separa.jpg></td>
+								<td width="80"><a href=privacy.htm class=cierre>Privacy Policy</a></td>
+							</tr>
+						</table>
+						</div>
+					</td>
+					<td bgcolor=#499DFF style="color:#FFF">&nbsp;</td>
+					<td><img src=images/cierre2.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td valign=bottom style="background: url(images/head_2_fondo.jpg) repeat-y;"><img src=images/head3_3_3.jpg></td>
+	</tr>
+	<tr>
+		<td><img src=images/head4.jpg></td>
+		<td>
+			<table border=0 cellpadding=0 cellspacing=0 width=100% align=center>
+				<tr>
+					<td><img src=images/head4_4.jpg></td>
+					<td width=100% style="background: url(images/head_3_fondo.jpg) repeat-x;"><img src=images/tran.gif height=14></td>
+					<td><img src=images/head3_3.jpg></td>
+				</tr>
+			</table>
+		</td>
+		<td><img src=images/head3.jpg></td>
+	</tr>
+</table>
+<script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-11367858-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+</body>
+</html>
