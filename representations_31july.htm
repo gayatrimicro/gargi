@@ -45,7 +45,7 @@ document.getElementById('p_0000004').style.display='none';
 	background-position:top right;
 	height:20px;
 	/* End layout CSS */
-	
+
 	overflow:hidden;
 	cursor:pointer;
 	padding-top: 2px;
@@ -64,7 +64,7 @@ document.getElementById('p_0000004').style.display='none';
 	background-position:top right;
 	height:20px;
 	/* End layout CSS */
-	
+
 	overflow:hidden;
 	padding-top: 2px;
 }
@@ -75,7 +75,7 @@ document.getElementById('p_0000004').style.display='none';
 	background-color:#F0F0F0;
 	width:400px;
 	/* End layout CSS */
-	
+
 	visibility:hidden;
 	height:0px;
 	overflow:hidden;
@@ -84,7 +84,7 @@ document.getElementById('p_0000004').style.display='none';
 }
 .dhtmlgoodies_answer_content{	/* Content that is slided down */
 	padding:1px;
-	font-size:0.9em;	
+	font-size:0.9em;
 	position:relative;
 }
 
@@ -93,7 +93,7 @@ document.getElementById('p_0000004').style.display='none';
 /************************************************************************************************************
 (C) www.dhtmlgoodies.com, November 2005
 
-This is a script from www.dhtmlgoodies.com. You will find this and a lot of other scripts at our website.	
+This is a script from www.dhtmlgoodies.com. You will find this and a lot of other scripts at our website.
 
 Terms of use:
 You are free to use this script as long as the copyright message is kept intact. However, you may not
@@ -122,27 +122,27 @@ function showHideContent(e,inputId)
 	var answerDiv = document.getElementById('dhtmlgoodies_a' + numericId);
 
 	objectIdToSlideDown = false;
-	
-	if(!answerDiv.style.display || answerDiv.style.display=='none'){		
-		if(dhtmlgoodies_activeId &&  dhtmlgoodies_activeId!=numericId){			
+
+	if(!answerDiv.style.display || answerDiv.style.display=='none'){
+		if(dhtmlgoodies_activeId &&  dhtmlgoodies_activeId!=numericId){
 			objectIdToSlideDown = numericId;
 			slideContent(dhtmlgoodies_activeId,(dhtmlgoodies_slideSpeed*-1));
 		}else{
-			
+
 			answerDiv.style.display='block';
 			answerDiv.style.visibility = 'visible';
-			
+
 			slideContent(numericId,dhtmlgoodies_slideSpeed);
 		}
 	}else{
 		slideContent(numericId,(dhtmlgoodies_slideSpeed*-1));
 		dhtmlgoodies_activeId = false;
-	}	
+	}
 }
 
 function slideContent(inputId,direction)
 {
-	
+
 	var obj =document.getElementById('dhtmlgoodies_a' + inputId);
 	var contentObj = document.getElementById('dhtmlgoodies_ac' + inputId);
 	height = obj.clientHeight;
@@ -166,11 +166,11 @@ function slideContent(inputId,direction)
 		setTimeout('slideContent(' + inputId + ',' + direction + ')',dhtmlgoodies_timer);
 	}else{
 		if(height<=1){
-			obj.style.display='none'; 
+			obj.style.display='none';
 			if(objectIdToSlideDown && objectIdToSlideDown!=inputId){
 				document.getElementById('dhtmlgoodies_a' + objectIdToSlideDown).style.display='block';
 				document.getElementById('dhtmlgoodies_a' + objectIdToSlideDown).style.visibility='visible';
-				slideContent(objectIdToSlideDown,dhtmlgoodies_slideSpeed);				
+				slideContent(objectIdToSlideDown,dhtmlgoodies_slideSpeed);
 			}else{
 				dhtmlgoodies_slideInProgress = false;
 			}
@@ -195,16 +195,16 @@ function initShowHideDivs()
 			while(answer && answer.tagName!='DIV'){
 				answer = answer.nextSibling;
 			}
-			answer.id = 'dhtmlgoodies_a'+divCounter;	
+			answer.id = 'dhtmlgoodies_a'+divCounter;
 			contentDiv = answer.getElementsByTagName('DIV')[0];
-			contentDiv.style.top = 0 - contentDiv.offsetHeight + 'px'; 	
+			contentDiv.style.top = 0 - contentDiv.offsetHeight + 'px';
 			contentDiv.className='dhtmlgoodies_answer_content';
 			contentDiv.id = 'dhtmlgoodies_ac' + divCounter;
 			answer.style.display='none';
 			answer.style.height='1px';
 			divCounter++;
-		}		
-	}	
+		}
+	}
 }
 window.onload = initShowHideDivs;
 </script>
@@ -242,7 +242,7 @@ window.onload = initShowHideDivs;
 							<tr>
 								<td valign=top style="padding-bottom:4px;">
 			<a href="index.htm">
-			<img border="0" src="images/home_rotativa1_fondo.jpg" width="205" height="186"></a></td>
+			<img border="0" src="images/home_rotativa1_fondo.png" width="205" height="186"></a></td>
 								<td valign=top style="padding-bottom:4px;">
 								<p align="center">
 <script type="text/javascript">
@@ -298,14 +298,14 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 											<td width=100%><a href=news.htm class=item_menu>
 											News / Events</font></a></td>
 										</tr>
-													
+
 																			<tr>
 											<td width=100%><a href=careers.htm class=item_menu>Careers</a></td>
 										</tr>
 																			<tr>
 											<td width=100%><a href=contact.htm class=item_menu>Contact Us</a></td>
 										</tr>
-																			
+
 																			<tr>
 											<td width=100%><a href=social.htm class=item_menu>
 											Social Responsibility</a></td>
@@ -331,31 +331,31 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 							<tr>
 								<td><img src=images/awards_bottom.jpg width="205"></td>
 							</tr>
-							
+
 								</table>
 					</td>
 					<td width=100% style="padding: 0px 3px 0px 0px;" VALIGN="top"><table border=0 cellpadding=0 cellspacing=0 width=100% align=center VALIGN="top">
 	<tr>
 		<td>
-			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left 
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left
               border=0><TBODY>
               <TR>
-                <TD 
+                <TD
                 style="PADDING-RIGHT: 4px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
-                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center 
+                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center
                   border=0>
                     <TBODY>
                     <TR>
                       <TD colspan="3">&nbsp;</TD></TR>
                     <TR>
                       <TD colspan="3">
-						
+
 							<img src=images/item_prod.jpg border=0>&nbsp;<a href=structure.htm class=indice_prod>Gargi Group</a>&nbsp;&nbsp;
-						
+
 							<img src=images/item_prod.jpg border=0>&nbsp;<a href=philosophy.htm class=indice_prod>Philosophy</a>&nbsp;&nbsp;
-							
+
 							<img src=images/item_prod.jpg border=0>&nbsp;<a href=representations.htm class=indice_prod>Representations</a>&nbsp;&nbsp;
-																		
+
 							<img src=images/item_prod.jpg border=0>&nbsp;<a href=awards.htm class=indice_prod>Awards</a>&nbsp;&nbsp;
 												</TD></TR>
                     <TR>
@@ -363,12 +363,12 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
                     <TR>
                       <TD width="63%"><SPAN class=titulos_celeste>International  Representations</SPAN></TD>
                       <TD width="37%">
-						<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+						<TABLE cellSpacing=0 cellPadding=0 width="100%"
                         align=center border=0 id="table2">
                           <tr>
 																<td  width="18">
 																<img border="0" src="images/mas.jpg" width="9" height="9"></td>
-																<td width="93%"><a href="internationalrep.htm" class=titulo_resumen>National  Representations</a> 
+																<td width="93%"><a href="internationalrep.htm" class=titulo_resumen>National  Representations</a>
 </td>
 															</tr>
                           </TABLE>
@@ -376,20 +376,20 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
                       <TD width="1%">&nbsp;</TD></TR>
                     <TR>
                       <TD height="297" valign="top" colspan="3">
-                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%"
                         align=center border=0>
                           <TBODY>
                           <tr>
 					<td colspan="2"><div style="margin:10px 0px 10px 0px; background-image:url(images/puntos.jpg);"><img src=images/tran.gif></div></td>
 				</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                           <TR>
                             <td valign=top width="60%" >
-						
-						<b><span style="text-transform: uppercase">Omega Foundry 
+
+						<b><span style="text-transform: uppercase">Omega Foundry
 						Machinery Ltd.</span><br>
 						</b><br>
 						<b>Website</b>:
@@ -408,58 +408,58 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
    <li>  Coating Plants
    <li>   Core Making
    <li>   Ancillary Items
-						
+
 							</ul>
 						</span>
 							</td>
                             <td width="40%" >
-						
+
 						<p align="center">
-						
+
 						<img border="0" src="images/omega-logo.jpg" width="200" height="43" align=left></td></TR>
-                                
-                                
-                                
-                                
+
+
+
+
                           <TR>
                             <td valign=top width="100%" colspan="2" >
-						
-						<b>AFTER SALES 
+
+						<b>AFTER SALES
 						SERVICES</b><br>
-						The sale of above equipment is backed by a team of 
-						qualified &amp; experienced, Service Engineers, trained at 
-						OMEGA Peterborough, U.K. We also stock spare parts of 
+						The sale of above equipment is backed by a team of
+						qualified &amp; experienced, Service Engineers, trained at
+						OMEGA Peterborough, U.K. We also stock spare parts of
 						the Omega Equipments sold in India. <br/><br/></font>
 							</td></TR>
-                                
-                         
-                                
-                                
+
+
+
+
                           <TR>
                             <td valign=top style="padding-top:4px; padding-right:20px;" colspan="2">
-						
+
 						<hr style="border-style: dotted; border-width: 1px" color="#0456C2"></td></TR>
-                                
-                                
-                                
-                                
+
+
+
+
                           <TR>
                             <td valign=top style="padding-top:4px; padding-right:20px;" colspan="2">&nbsp;
-						
+
 						</td></TR>
-                                
-                                
-                                
-                                
+
+
+
+
                           <TR>
                             <td valign=top style="padding-top:4px; padding-right:20px;">
-						
+
 						<b>HEINRICH WAGNER SINTO Maschinenfabrik GmbH <br>
 						</b><br>
 						<b>Website</b>:
 						<a target="_blank" href="http://www.wagner-sinto.de">
 						<font color="#0273FD">www.wagner-sinto.de</font></a> <br>
-						Bahnhofstraße 101
+						Bahnhofstraï¿½e 101
 D-57334 Bad Laasphe,&nbsp;Germany						<br>
 						<ul><li>High Pressure Moulding Line
 							<li>Tight Flask Green Sand Moulding Line<li>Flaskless Green Sand Moulding Line
@@ -484,13 +484,13 @@ D-57334 Bad Laasphe,&nbsp;Germany						<br>
 </div><div class="dhtmlgoodies_question1" style="width: 410px; height: 20px">
 							&nbsp;<b><span style="text-transform: uppercase; ">SEIATSU ACE</span></b></div>
 							<div class="dhtmlgoodies_question1" style="width: 410px; height: 20px">
-							&nbsp;<b><span style="text-transform: uppercase; ">FBO  </span></b></div>
+							&nbsp;<b><span style="text-transform: uppercase; ">FBO ï¿½</span></b></div>
 							<div class="dhtmlgoodies_question1" style="width: 410px; height: 20px">
 							&nbsp;<b><span style="text-transform: uppercase; ">Vacuum Moulding Lines </span></b></div>
 							<div class="dhtmlgoodies_question1" style="width: 410px; height: 20px">
 							&nbsp;<b><span style="text-transform: uppercase; ">Pouring Automats</span></b></div>
 							<div class="dhtmlgoodies_question1" style="width: 410px; height: 20px">
-							&nbsp;<b><span style="text-transform: uppercase; ">MPS  </span></b></div>
+							&nbsp;<b><span style="text-transform: uppercase; ">MPS ï¿½</span></b></div>
 							<div class="dhtmlgoodies_question1" style="width: 410px; height: 20px">
 							&nbsp;<b><span style="text-transform: uppercase; ">Additional equipment </span></b></div>
 							<div class="dhtmlgoodies_question1" style="width: 410px; height: 20px">
@@ -498,7 +498,7 @@ D-57334 Bad Laasphe,&nbsp;Germany						<br>
 
 </td>
                             <td style="padding-top:4px; padding-right:20px;">
-						
+
 						<img border="0" src="images/heinrich.gif" width="184" height="68"><p>&nbsp;</p>
 						<p>&nbsp;</p>
 						<p>&nbsp;</p>
@@ -517,77 +517,77 @@ D-57334 Bad Laasphe,&nbsp;Germany						<br>
 						<p>&nbsp;</p>
 						<p>&nbsp;</p>
 						<p>&nbsp;</td></TR>
-                                
-                                
-                                
-                                
+
+
+
+
                                 </TBODY></TABLE>
-						<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+						<TABLE cellSpacing=0 cellPadding=0 width="100%"
                         align=center border=0 id="table1">
                           <TBODY>
-                         
-                                
-                                
-                                
-                         
-                                
-                                
-                                
-                           
+
+
+
+
+
+
+
+
+
                           <tr>
 																<td colspan="2">
-						<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+						<TABLE cellSpacing=0 cellPadding=0 width="100%"
                         align=center border=0 id="table3">
                           <TBODY>
-                         
-                          
-                                
-                                
-                                
-                                
+
+
+
+
+
+
                                 </TBODY></TABLE>
 																</td>
 															</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                           <tr>
 																<td colspan="2">&nbsp;
-																<TABLE cellSpacing=0 cellPadding=0 width="100%" 
+																<TABLE cellSpacing=0 cellPadding=0 width="100%"
                         align=center border=0 id="table4">
                           <TBODY>
-                                
-                                
-                                
-                                
+
+
+
+
                           <tr>
 																<td colspan="2">
-						
+
 						<hr style="border-style: dotted; border-width: 1px" color="#0456C2"></td>
 															</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                           <tr>
 																<td  width="419">&nbsp;
 																</td>
 																<td width="40%">&nbsp;</td>
 															</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                           <tr>
 																<td>
 						<span style="text-transform: uppercase"><b>Clansman Dynamics</b></span><span class=contsize><br>
 						<p>Website: <a target=_blank href="http://www.clansmandynamics.com/">
 						<font color="#0273FD">www.clansmandynamics.com</font></a></p>
-						<p>Stephenson Building, 
-Nasmyth Avenue, 
-Scottish Enterprise Technology Park, 
-East Kilbride, 
+						<p>Stephenson Building,
+Nasmyth Avenue,
+Scottish Enterprise Technology Park,
+East Kilbride,
 Lanarkshire G75 0QR
 Scotland, United Kingdom </p>
 						<p>&nbsp;</p>
@@ -595,52 +595,52 @@ Scotland, United Kingdom </p>
 																<td>
 						<img border="0" src="images/clansman.jpg" width="190" height="57"></td>
 															</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                           <tr>
 																<td colspan="2">
 						<span class=contsize>
 
-						Clansman has a wide range of specifically designed and robust foundry solutions like Foundry, Manipulators, 
-    Canons, 
-    Powerbreakers, 
-    Wedges, 
+						Clansman has a wide range of specifically designed and robust foundry solutions like Foundry, Manipulators,
+    Canons,
+    Powerbreakers,
+    Wedges,
     Grinding and Cutting. </span></td>
 															</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                                 </TBODY></TABLE>
 																</td>
 															</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                           <tr>
 																<td  width="419">&nbsp;</td>
 																<td width="40%">&nbsp;</td>
 															</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                           <tr>
 																<td  width="419">&nbsp;</td>
 																<td width="40%">&nbsp;</td>
 															</tr>
-                                
-                                
-                                
-                                
+
+
+
+
                                 </TBODY></TABLE>
 						</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
 		</td>
 	</tr>
-</table>					
+</table>
 					</td>
 				</tr>
 			</table>

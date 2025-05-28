@@ -20,11 +20,11 @@
         margin-left: -150px;
 		border-radius:5px;
 		padding: 20px;
-		
+
       }
 	  #clo_se
 	  {
-		  
+
 		   background-color: #f85d02;
 			background-position: 0 0;
 			background-repeat: repeat-x;
@@ -65,7 +65,7 @@ function mostrar_public(id){
 
 
 
-/////////New Validation 
+/////////New Validation
 $(document).ready(function(){
 
 	$("#enter").click(function(){
@@ -75,14 +75,14 @@ $(document).ready(function(){
 		{
 			var a =send_data();
 
-			
+
     			    $("#mail-status").show();
     				 setTimeout(function () {
     			 		 $('#mail-status').hide();
     			 		  $('#contactus')[0].reset();
   						}, 5000);
-		   
-			return true; 
+
+			return true;
 		}
 
     });
@@ -152,7 +152,7 @@ $(document).ready(function(){
     			else
     			{
     				$('#Email').css('border-color', '#a4c7ff');
-   					
+
     			}
 
     			var a = IsEmail($('#Email').val());
@@ -197,21 +197,21 @@ $(document).ready(function(){
        			   }
      			 }
 
-    			return true	
+    			return true
 		}
 
 
 		function send_data()
 		{
-    	
+
        		 $.ajax({
        		 url: "submit.php?Name="+ $('#Name').val() + "&Company=" + $('#Company').val() + "&Phone=" + $('#Phone').val() + "&Email=" + $('#Email').val() + "&Comments=" + $('#Comments').val(),
        		 	type: "POST",
        		 	success: function(result){
-       		 	
+
           	$("#mail-status").html(result);
        	 }});
-   		
+
     	}
 
 
@@ -241,8 +241,8 @@ emsg+=("\n Company")
 /*
 if (contactus.Phone.value=="")
 emsg+=("\n Phone")
-else 
-{	
+else
+{
 		if(!validate(contactus.Phone))
 		return false;
 }
@@ -302,20 +302,20 @@ else
 		//document.getElementById("con_tact").style.opacity = "0.5";
 		//document.getElementById("pop_up").style.zIndex = "1";
 		//document.getElementById('con_tact').style.pointerEvents = 'none';
-			
-		//return false;	
+
+		//return false;
 }
 /*
 function validate(field) {
 var valid = "0123456789"
 var ok = "yes";
 var temp;
-for (var i=0; i<field.value.length; i++) 
+for (var i=0; i<field.value.length; i++)
 {
 	temp = "" + field.value.substring(i, i+1);
 	if (valid.indexOf(temp) == "-1") ok = "no";
 }
-if (ok == "no") 
+if (ok == "no")
 {
 		alert("Invalid Phone Number!");
 		field.focus();
@@ -323,7 +323,7 @@ if (ok == "no")
 		return false;
 }
   else
-  
+
   return true;
 }
 
@@ -333,7 +333,7 @@ if (ok == "no")
 
 function close_div()
 {
-	//document.getElementById('pop_up').style.display='none';	
+	//document.getElementById('pop_up').style.display='none';
 	//document.getElementById('con_tact').style.pointerEvents = 'auto';
 	//document.getElementById("con_tact").style.opacity = "1";
 	//document.contactus.reset();
@@ -380,7 +380,7 @@ function close_div()
 							<tr>
 								<td valign=top style="padding-bottom:4px;">
 			<a href="index.htm">
-			<img border="0" src="images/home_rotativa1_fondo.jpg" width="205" height="186"></a></td>
+			<img border="0" src="images/home_rotativa1_fondo.png" width="205" height="186"></a></td>
 								<td valign=top style="padding-bottom:4px;">
 								<p align="center">
 <!-- <script type="text/javascript">
@@ -435,14 +435,14 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 																									<tr>
 											<td width=100%><a href=news.htm class=item_menu>News / Events</a></td>
 										</tr>
-													
+
 																			<tr>
 											<td width=100%><a href=careers.htm class=item_menu>Careers</a></td>
 										</tr>
 																			<tr>
 											<td width=100%><a href=contact.htm class=item_menu>Contact Us</a></td>
 										</tr>
-																			
+
 																			<tr>
 											<td width=100%><a href=social.htm class=item_menu>
 											Social Responsibility</a></td>
@@ -469,18 +469,18 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 							<tr>
 								<td><img src=images/awards_bottom.jpg width="205"></td>
 							</tr>
-							
+
 								</table>
 					</td>
 					<td width=100% style="padding: 0px 3px 0px 0px;" VALIGN="top"><table border=0 cellpadding=0 cellspacing=0 width=100% align=center VALIGN="top">
 	<tr>
 		<td>
-			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left 
+			<TABLE cellSpacing=0 cellPadding=0 width="100%" align=left
               border=0><TBODY>
               <TR>
-                <TD 
+                <TD
                 style="PADDING-RIGHT: 4px; PADDING-LEFT: 24px; PADDING-BOTTOM: 0px; PADDING-TOP: 0px">
-                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center 
+                  <TABLE cellSpacing=0 cellPadding=0 width="98%" align=center
                   border=0>
                     <TBODY>
                     <TR>
@@ -489,7 +489,7 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
                       <TD><span class=titulos>Contact Us</span></TD></TR>
                     <TR>
                       <TD height="333" valign="top">
-                        <TABLE cellSpacing=0 cellPadding=0 width="100%" 
+                        <TABLE cellSpacing=0 cellPadding=0 width="100%"
                         align=center border=0>
                           <TBODY>
                           <tr>
@@ -497,7 +497,7 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 				</tr>
 				</TBODY></TABLE>
 						<table border=0 cellpadding=0 cellspacing=0 width=100%>
-	
+
 	<tr>
 		<td align=left>
 <table border=0 cellpadding=0 cellspacing=0 width=100%>
@@ -510,10 +510,11 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 		<p align="left">GARGI GROUP</p>
 		</b>
 		<p align="left">
-		2, Mercantile Apartments, <br>
-		Dr. C. Gidwani Road, Chembur,
+		 801, Vikas Centre,
+ <br>
+		Dr. Choitram Gidwani Road, Chembur,
 <br>
-		Mumbai - 400074. Maharashtra. India.
+		Chembur, Mumbai  –  400074, Maharashtra, India.
 </p>
 				<p align="left">&nbsp;
 		</p>
@@ -581,8 +582,8 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 										</tr>
 										<tr>
 											<td align="right">
-												<font class=asterisco>*Compulsory 
-												Obligatory</font>														
+												<font class=asterisco>*Compulsory
+												Obligatory</font>
 											</td>
 										</tr>
 									</table>
@@ -599,7 +600,7 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 		<td bgcolor=#E1ECFE width="1"><img src=images/tran.gif></td>
 		<td style="padding-left:20px;" width=100% valign="top" align="center">
 		<table border=0 cellpadding=0 cellspacing=0 width=100%>
-	
+
 </table></td>
 	</tr>
 	</table>
@@ -610,7 +611,7 @@ AC_FL_RunContent( 'codebase','http://fpdownload.macromedia.com/pub/shockwave/cab
 						</TD></TR></TBODY></TABLE></TD></TR></TBODY></TABLE>
 		</td>
 	</tr>
-</table>					
+</table>
 					</td>
 				</tr>
 			</table>
