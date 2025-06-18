@@ -635,3 +635,20 @@ td > a > img {
   width: auto;
   height: auto;
 }
+/* Hiren  css */
+img[usemap="#FPMap0"] {
+  position: absolute;
+}
+img[usemap="#FPMap1"] {
+  width: 100%;
+}
+
+a:has(.gargilogo) {
+  display: block;
+  width: 200px;
+  text-align: center;
+}
+.gargilogo {
+  max-width: 140px;
+  height: auto;
+}
